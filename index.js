@@ -1,9 +1,13 @@
 var http = require("http");
 
 var express = require("express");
+var serveFavicon = require("serve-favicon");
+
 var app = express();
 
 app.set("port", (process.env.PORT || 5000));
+
+app.use(serveFavicon(__dirname + "/favicon.ico"));
 
 app.use(express.static(__dirname + "/public"));
 

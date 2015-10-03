@@ -1,0 +1,166 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.75em;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  color: rgba(28, 28, 28, .9);
+  background-image: url("http://static.squarespace.com/static/53c827a3e4b00a63fc062eb5/t/53e162a3e4b08ac0a8ecac68/1407279779644/DSC07168.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+main {
+  display: none;
+  opacity: 0;
+}
+
+
+h1 {
+  font-size: 26px;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #1c1c1c;
+  margin: 0px 0px 0.75em;
+}
+
+h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  letter-spacing: 4px;
+  font-weight: 300;
+  color: #1c1c1c;
+  margin: 0px 0px 0.75em;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1.1em;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin: 0px 0px 0.75em;
+}
+
+p {
+  margin: 0px;
+}
+
+br {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+br.lite {
+  height: 15px;
+}
+
+br.normal {
+  height: 30px;
+}
+
+br.hard {
+  height: 45px;
+}
+
+
+.clearfix:before {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.button-pink {
+  padding: 1em 2.5em;
+  color: #fff;
+  background-color: rgba(28, 28, 28, 0.95);
+  border-color: rgba(28, 28, 28, 0.95);
+  cursor: pointer;
+  opacity: 1;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button-pink:hover {
+  opacity: 0.8;
+}
+
+#main-navigation {
+  margin: 0px auto 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#main-navigation a {
+  padding: 1em 1em 0px;
+  font-size: 12px;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: 400;
+  color: #1c1c1c;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+#main-navigation a:hover {
+  color: rgba(28, 28, 28, 0.5);
+}
+
+
+#main-header {
+  padding: 60px;
+  text-align: center;
+}
+
+#main-header #name a {
+  font-family: "Bad Script";
+  line-height: 1em;
+  text-decoration: none;
+  font-weight: 100;
+  color: #1a1a1a;
+  margin: 0 0 28px;
+  font-size: 72px;
+}
+
+#main-header #description {
+  color: #c2c2c2;
+  margin: -5px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#main-section {
+  margin: 0px auto 30px;
+  width: 960px;
+  position: relative;
+}
+
+#main-article {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  padding: 8% 8%;
+  box-sizing: border-box;
+}
