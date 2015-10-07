@@ -7,7 +7,7 @@ requirejs.config({
   },
   shim: {
     "libraries/backbone-min": {
-      deps: [ "libraries/underscore-min", "libraries/jquery-2.1.4.min", "libraries/TweenMax.min.js", "libraries/view-loader-0.0.1.js" ],
+      deps: [ "libraries/underscore-min", "libraries/jquery-2.1.4.min", "libraries/TweenMax.min.js" ],
       exports: "Backbone"
     },
     "libraries/underscore-min": {
@@ -16,17 +16,12 @@ requirejs.config({
     "libraries/jquery.mobile.custom.js": {
       deps: [ "libraries/jquery-2.1.4.min" ],
       exports: "$"
-    },
-    "libraries/view-loader-0.0.1.js": {
-      exports: "viewLoader"
     }
   },
   waitSeconds: 50
 });
 
-require([ "libraries/view-loader-0.0.1.js", "libraries/backbone-min"  ], function (
-  ViewLoader
-) {
+require([ "libraries/backbone-min"  ], function () {
 
   $(function () {
 
@@ -47,22 +42,22 @@ require([ "libraries/view-loader-0.0.1.js", "libraries/backbone-min"  ], functio
     el: $("#main-header #name a"),
     setActive: function () {
       var mainHeaderView = this;
-      if (this.active === false) {
-        this.active = true;
+      if (this.activeView === false) {
+        this.activeView = true;
         TweenMax.to(this.$el, 0.6, { fontSize: 120 });
       }
-      else if (typeof this.active === "undefined") {
-        this.active = true;
+      else if (typeof this.activeView === "undefined") {
+        this.activeView = true;
         TweenMax.set(this.$el, { fontSize: 120 });
       }
     },
     setDeactive: function () {
-      if (this.active === true) {
-        this.active = false;
+      if (this.activeView === true) {
+        this.activeView = false;
         TweenMax.to(this.$el, 0.6, { fontSize: 72 });
       }
-      else if (typeof this.active === "undefined") {
-        this.active = false;
+      else if (typeof this.activeView === "undefined") {
+        this.activeView = false;
         TweenMax.set(this.$el, { fontSize: 72 });
       }
     }
@@ -70,93 +65,86 @@ require([ "libraries/view-loader-0.0.1.js", "libraries/backbone-min"  ], functio
 
   var mainHeaderView = new MainHeaderView();
 
-  var viewLoader = new ViewLoader(
-    {
-      request: function(url, callback) {
-        require([ url ], function (data) {
-          callback(data);
-        });
-      },
-      initialization: function(Module, params) {
-        return new Module(params);
-      },
-      moduleInsert: function(module, selector, parentModule) {
-        if (parentModule) {
-          parentModule.find(selector).append(module.$el);
-        }
-        else {
-          $("body").find(selector).append(module.$el);
-        }
-      },
-      loaderInsert: function($parentContainer, $loader) {
-        $parentContainer.append($loader);
-      },
-      update: function(module, params) {
-        module.render(params);
-      },
-      destroy: function(module) {
-        module.remove();
-      }
-    }, [
-      {
-        group: "user",
-        selector: "#main-section",
-        getContainer: function () { return $("<main/>", { class: "main-container" }); },
-        animation: {
-          handler: {
-            simpleShow: function (view, done) {
-              TweenMax.fromTo(view.$el, 0.6, { opacity: 0 }, { opacity: 1, onComplete: function () { done(); } });
-            },
-            simpleHide: function (view, done) {
-              TweenMax.fromTo(view.$el, 0.6, { opacity: 1 }, { opacity: 0, onComplete: function () { view.remove(); done(); } });
-            }
-          },
-          order: {
-            come: 0,
-            leave: 1
-          }
-        },
-        loaderConfiguration: {
-          getElement: function () { return new MainLoader() },
-          canceledBeforeTime: 60,
-          animation: {
-            come: function (loader, done) { },
-            leaving: function (loader, done) { }
-          }
-        },
-        module: [
-          {
-            name: "about",
-            path: "views/about/main",
-            priority: "00"
-          }, {
-            name: "service",
-            path: "views/service/main",
-            priority: "01"
-          }
-        ]
-      }
-    ]
-  );
-
   var Router = Backbone.Router.extend({
     routes: {
       "": function (params) {
+        var router = this;
         mainHeaderView.setActive();
-        viewLoader.downloadModule([ ]);
+        if (this.activeViewLvl1) {
+          router.activeViewLvl1Name = "";
+          TweenMax.to(this.activeViewLvl1.$el, 0.6, {
+            opacity: 0,
+            onComplete: function () { router.activeViewLvl1.remove(); }
+          });
+        }
       },
       "about": function (params) {
-        mainHeaderView.setDeactive();
-        viewLoader.downloadModule({
-          "user:about": params
-        });
+        var router = this;
+        if (router.activeViewLvl1Name !== "about") {
+          mainHeaderView.setDeactive();
+          router.activeViewLvl1Name = "about";
+          require([ "views/about/main" ], function (AboutView) {
+            if (router.activeViewLvl1) {
+              var prevActive = router.activeViewLvl1;
+              TweenMax.to(prevActive.$el, 0.6, {
+                opacity: 0,
+                onComplete: function () { prevActive.remove(); }
+              });
+            }
+            var aboutView = new AboutView();
+            router.activeViewLvl1 = aboutView;
+            TweenMax.fromTo(aboutView.$el, 0.6, { opacity: 0 }, {
+              opacity: 1
+            });
+            $("#main-section").append(aboutView.$el);
+          });
+        }
       },
-      "service": function (params) {
-        mainHeaderView.setDeactive();
-        viewLoader.downloadModule({
-          "user:service": params
+      "service": "service",
+      "service/find-love": function (params) {
+        var router = this;
+        router.service(params, function () {
+          require([ "views/service/find-love/main" ], function (FindLove) {
+            var findLove = router.findLove = new FindLove();
+            $("body").append(findLove.$el);
+          });
         });
       }
+    },
+    "service": function (params, callback) {
+      var router = this;
+      if (router.activeViewLvl1Name !== "service") {
+        mainHeaderView.setDeactive();
+        router.activeViewLvl1Name = "service";
+        require([ "views/service/main" ], function (ServiceView) {
+          if (router.activeViewLvl1) {
+            var prevActive = router.activeViewLvl1;
+            TweenMax.set(prevActive.$el, { position: "absolute" });
+            TweenMax.to(prevActive.$el, 0.6, {
+              opacity: 0,
+              onComplete: function () { prevActive.remove(); }
+            });
+          }
+          var serviceView = new ServiceView();
+          router.activeViewLvl1 = serviceView;
+          TweenMax.fromTo(serviceView.$el, 0.6, { opacity: 0 }, {
+            opacity: 1
+          });
+          $("#main-section").append(serviceView.$el);
+          if (callback) callback();
+        });
+      }
+      else {
+        if (callback) callback();
+      }
+    },
+    initialize: function () {
+      var router = this;
+      this.on("all", function () {
+        if (router.findLove && router.fragment !== "service/find-love") {
+          router.findLove.close();
+        }
+      });
     }
   });
 

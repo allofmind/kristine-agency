@@ -8,7 +8,7 @@ define([
 
   return Backbone.View.extend({
     tagName: "article",
-    id: "main-article",
+    id: "main-article-wrap",
     initialize: function() {
       this.$el.append(template);
     }

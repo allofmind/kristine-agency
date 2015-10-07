@@ -1,0 +1,93 @@
+#heart-icon {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin: 0px auto;
+  animation: heart-icon_scale 1.5s ease-in-out infinite;
+}
+
+#heart-icon:before , #heart-icon:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  -moz-border-radius: 50px 50px 0 0;
+  -webkit-border-radius: 50px;
+  border-radius: 50px 50px 0 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+#heart-icon:after {
+  left: 0;
+  -moz-box-shadow: 3px -45px 5px 3px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 3px -45px 5px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 3px -45px 5px 3px rgba(255, 255, 255, 0.5);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+#heart-icon .shadow-box {
+  position: absolute;
+  top: 16px;
+  left: 55px;
+  z-index: 3;
+  width: 0px;
+  height: 0px;
+  animation: heart-icon_box-shadow 1.5s infinite;
+}
+
+@keyframes heart-icon_box-shadow {
+  0% {
+    box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 65px 25px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes heart-icon_scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.submit-request {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  letter-spacing: 4px;
+  font-weight: 300;
+  color: #1c1c1c;
+  margin: 0px 0px 0.75em;
+  transition: letter-spacing 0.3s ease-in-out;
+}
+
+.submit-request:hover {
+  letter-spacing: 5px;
+  font-size: 19px;
+}

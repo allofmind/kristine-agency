@@ -21,6 +21,10 @@ body {
   box-sizing: border-box;
 }
 
+body.poppup-active {
+  overflow: hidden;
+}
+
 main {
   display: none;
   opacity: 0;
@@ -57,6 +61,11 @@ h3 {
 
 p {
   margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
 }
 
 br {
@@ -157,9 +166,13 @@ br.hard {
   position: relative;
 }
 
-#main-article {
+#main-article-wrap {
   position: absolute;
   width: 100%;
+  padding-bottom: 90px;
+}
+
+#main-article {
   background-color: #fff;
   padding: 8% 8%;
   box-sizing: border-box;
