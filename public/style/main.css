@@ -93,6 +93,10 @@ br.hard {
   display: block;
 }
 
+.no-margin-left {
+  margin-left: 0px !important;
+}
+
 .centered-content {
   text-align: center;
 }

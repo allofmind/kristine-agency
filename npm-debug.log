@@ -1,0 +1,1560 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'i', 'pg-native', '-S' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose node symlink /usr/bin/node
+5 verbose install initial load of /home/timetoburnfire/Desktop/krystine-agency/package.json
+6 warn package.json krystine-agency@0.0.1 No description
+7 warn package.json krystine-agency@0.0.1 No repository field.
+8 warn package.json krystine-agency@0.0.1 No README data
+9 warn package.json krystine-agency@0.0.1 No license field.
+10 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/body-parser/package.json
+11 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/cookie-parser/package.json
+12 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/express/package.json
+13 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/express-session/package.json
+14 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/io/package.json
+15 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/morgan/package.json
+16 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/multer/package.json
+17 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/multiparty/package.json
+18 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/passport/package.json
+19 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/passport-http-bearer/package.json
+20 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/passport-local/package.json
+21 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg/package.json
+22 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-hstore/package.json
+23 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/sequelize/package.json
+24 verbose installManyTop reading scoped package data from /home/timetoburnfire/Desktop/krystine-agency/node_modules/serve-favicon/package.json
+25 info package.json passport-http-bearer@1.0.1 No license field.
+26 info package.json passport-local@1.0.0 No license field.
+27 info package.json pg-hstore@2.3.2 No license field.
+28 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/package.json
+29 silly cache add args [ 'pg-native', null ]
+30 verbose cache add spec pg-native
+31 silly cache add parsed spec { raw: 'pg-native',
+31 silly cache add   scope: null,
+31 silly cache add   name: 'pg-native',
+31 silly cache add   rawSpec: '',
+31 silly cache add   spec: '*',
+31 silly cache add   type: 'range' }
+32 silly addNamed pg-native@*
+33 verbose addNamed "*" is a valid semver range for pg-native
+34 silly addNameRange { name: 'pg-native', range: '*', hasData: false }
+35 silly mapToRegistry name pg-native
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/pg-native
+39 verbose addNameRange registry:https://registry.npmjs.org/pg-native not in flight; fetching
+40 verbose request uri https://registry.npmjs.org/pg-native
+41 verbose request no auth needed
+42 info attempt registry request try #1 at 13:34:50
+43 verbose request id 4e2098fa92764cbe
+44 http request GET https://registry.npmjs.org/pg-native
+45 http 200 https://registry.npmjs.org/pg-native
+46 silly get cb [ 200,
+46 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+46 silly get     etag: '"220KNNDSA1T22Z1BGDXYJ0SMO"',
+46 silly get     'content-type': 'application/json',
+46 silly get     'cache-control': 'max-age=60',
+46 silly get     'content-length': '41803',
+46 silly get     'accept-ranges': 'bytes',
+46 silly get     date: 'Tue, 13 Oct 2015 10:34:54 GMT',
+46 silly get     via: '1.1 varnish',
+46 silly get     age: '0',
+46 silly get     connection: 'keep-alive',
+46 silly get     'x-served-by': 'cache-fra1222-FRA',
+46 silly get     'x-cache': 'MISS',
+46 silly get     'x-cache-hits': '0',
+46 silly get     'x-timer': 'S1444732494.735647,VS0,VE183',
+46 silly get     vary: 'Accept' } ]
+47 verbose get saving pg-native to /home/timetoburnfire/.npm/registry.npmjs.org/pg-native/.cache.json
+48 silly addNameRange number 2 { name: 'pg-native', range: '*', hasData: true }
+49 silly addNameRange versions [ 'pg-native',
+49 silly addNameRange   [ '0.0.1',
+49 silly addNameRange     '0.0.2',
+49 silly addNameRange     '0.1.0',
+49 silly addNameRange     '0.2.0',
+49 silly addNameRange     '0.3.0',
+49 silly addNameRange     '0.4.0',
+49 silly addNameRange     '0.4.1',
+49 silly addNameRange     '0.5.0',
+49 silly addNameRange     '0.5.1',
+49 silly addNameRange     '0.5.2',
+49 silly addNameRange     '1.0.0',
+49 silly addNameRange     '1.0.1',
+49 silly addNameRange     '1.0.2',
+49 silly addNameRange     '1.0.3',
+49 silly addNameRange     '1.1.0',
+49 silly addNameRange     '1.2.0',
+49 silly addNameRange     '1.3.0',
+49 silly addNameRange     '1.4.0',
+49 silly addNameRange     '1.4.1',
+49 silly addNameRange     '1.4.2',
+49 silly addNameRange     '1.4.3',
+49 silly addNameRange     '1.5.0',
+49 silly addNameRange     '1.7.2',
+49 silly addNameRange     '1.7.3',
+49 silly addNameRange     '1.8.0',
+49 silly addNameRange     '1.8.1',
+49 silly addNameRange     '1.9.0' ] ]
+50 silly addNamed pg-native@1.9.0
+51 verbose addNamed "1.9.0" is a plain semver version for pg-native
+52 silly mapToRegistry name pg-native
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://registry.npmjs.org/
+55 silly mapToRegistry uri https://registry.npmjs.org/pg-native
+56 verbose addRemoteTarball https://registry.npmjs.org/pg-native/-/pg-native-1.9.0.tgz not in flight; adding
+57 verbose addRemoteTarball [ 'https://registry.npmjs.org/pg-native/-/pg-native-1.9.0.tgz',
+57 verbose addRemoteTarball   '73b9dc6243a90121991cea509427e34a17d1a72e' ]
+58 info retry fetch attempt 1 at 13:34:55
+59 info attempt registry request try #1 at 13:34:55
+60 http fetch GET https://registry.npmjs.org/pg-native/-/pg-native-1.9.0.tgz
+61 http fetch 200 https://registry.npmjs.org/pg-native/-/pg-native-1.9.0.tgz
+62 silly fetchAndShaCheck shasum 73b9dc6243a90121991cea509427e34a17d1a72e
+63 verbose addTmpTarball /tmp/npm-12308-a00fb20e/registry.npmjs.org/pg-native/-/pg-native-1.9.0.tgz not in flight; adding
+64 verbose addTmpTarball already have metadata; skipping unpack for pg-native@1.9.0
+65 silly cache afterAdd pg-native@1.9.0
+66 verbose afterAdd /home/timetoburnfire/.npm/pg-native/1.9.0/package/package.json not in flight; writing
+67 verbose afterAdd /home/timetoburnfire/.npm/pg-native/1.9.0/package/package.json written
+68 silly install resolved [ { name: 'pg-native',
+68 silly install resolved     version: '1.9.0',
+68 silly install resolved     description: 'A slightly nicer interface to Postgres over node-libpq',
+68 silly install resolved     main: 'index.js',
+68 silly install resolved     scripts: { test: 'mocha' },
+68 silly install resolved     repository:
+68 silly install resolved      { type: 'git',
+68 silly install resolved        url: 'git://github.com/brianc/node-pg-native.git' },
+68 silly install resolved     keywords: [ 'postgres', 'pg', 'libpq' ],
+68 silly install resolved     author: { name: 'Brian M. Carlson' },
+68 silly install resolved     license: 'MIT',
+68 silly install resolved     bugs: { url: 'https://github.com/brianc/node-pg-native/issues' },
+68 silly install resolved     homepage: 'https://github.com/brianc/node-pg-native',
+68 silly install resolved     dependencies:
+68 silly install resolved      { libpq: '^1.7.0',
+68 silly install resolved        'pg-types': '1.6.0',
+68 silly install resolved        'readable-stream': '1.0.31' },
+68 silly install resolved     devDependencies:
+68 silly install resolved      { 'generic-pool': '^2.1.1',
+68 silly install resolved        async: '^0.9.0',
+68 silly install resolved        'concat-stream': '^1.4.6',
+68 silly install resolved        lodash: '^2.4.1',
+68 silly install resolved        mocha: '^1.21.4',
+68 silly install resolved        okay: '^0.3.0',
+68 silly install resolved        pg: '^3.4.2',
+68 silly install resolved        semver: '^4.1.0' },
+68 silly install resolved     gitHead: '51304e6224191899c6a07a96301082b9c0ab29b0',
+68 silly install resolved     _id: 'pg-native@1.9.0',
+68 silly install resolved     _shasum: '73b9dc6243a90121991cea509427e34a17d1a72e',
+68 silly install resolved     _from: 'pg-native@*',
+68 silly install resolved     _npmVersion: '2.11.3',
+68 silly install resolved     _nodeVersion: '0.12.7',
+68 silly install resolved     _npmUser: { name: 'brianc', email: 'brian.m.carlson@gmail.com' },
+68 silly install resolved     maintainers: [ [Object] ],
+68 silly install resolved     dist:
+68 silly install resolved      { shasum: '73b9dc6243a90121991cea509427e34a17d1a72e',
+68 silly install resolved        tarball: 'http://registry.npmjs.org/pg-native/-/pg-native-1.9.0.tgz' },
+68 silly install resolved     directories: {},
+68 silly install resolved     _resolved: 'https://registry.npmjs.org/pg-native/-/pg-native-1.9.0.tgz' } ]
+69 info install pg-native@1.9.0 into /home/timetoburnfire/Desktop/krystine-agency
+70 info installOne pg-native@1.9.0
+71 verbose installOne of pg-native to /home/timetoburnfire/Desktop/krystine-agency not in flight; installing
+72 verbose lock using /home/timetoburnfire/.npm/_locks/pg-native-ccf730fbacf427e3.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+73 silly install write writing pg-native 1.9.0 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+74 verbose unbuild node_modules/pg-native
+75 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+76 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+77 verbose tar unpack /home/timetoburnfire/.npm/pg-native/1.9.0/package.tgz
+78 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+79 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native is being purged
+80 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+81 silly gunzTarPerm modes [ '775', '664' ]
+82 silly gunzTarPerm extractEntry package.json
+83 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+84 silly gunzTarPerm extractEntry .npmignore
+85 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+86 silly gunzTarPerm extractEntry README.md
+87 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+88 silly gunzTarPerm extractEntry index.js
+89 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+90 silly gunzTarPerm extractEntry bench/index.js
+91 silly gunzTarPerm modified mode [ 'bench/index.js', 420, 436 ]
+92 silly gunzTarPerm extractEntry bench/leaks.js
+93 silly gunzTarPerm modified mode [ 'bench/leaks.js', 420, 436 ]
+94 silly gunzTarPerm extractEntry .travis.yml
+95 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+96 silly gunzTarPerm extractEntry Makefile
+97 silly gunzTarPerm modified mode [ 'Makefile', 420, 436 ]
+98 silly gunzTarPerm extractEntry lib/copy-stream.js
+99 silly gunzTarPerm modified mode [ 'lib/copy-stream.js', 420, 436 ]
+100 silly gunzTarPerm extractEntry test/array-mode.js
+101 silly gunzTarPerm modified mode [ 'test/array-mode.js', 420, 436 ]
+102 silly gunzTarPerm extractEntry test/custom-types.js
+103 silly gunzTarPerm modified mode [ 'test/custom-types.js', 420, 436 ]
+104 silly gunzTarPerm extractEntry test/domains.js
+105 silly gunzTarPerm modified mode [ 'test/domains.js', 420, 436 ]
+106 silly gunzTarPerm extractEntry test/huge-query.js
+107 silly gunzTarPerm modified mode [ 'test/huge-query.js', 420, 436 ]
+108 silly gunzTarPerm extractEntry test/copy-to.js
+109 silly gunzTarPerm modified mode [ 'test/copy-to.js', 420, 436 ]
+110 silly gunzTarPerm extractEntry test/async-workflow.js
+111 silly gunzTarPerm modified mode [ 'test/async-workflow.js', 420, 436 ]
+112 silly gunzTarPerm extractEntry test/many-connections.js
+113 silly gunzTarPerm modified mode [ 'test/many-connections.js', 420, 436 ]
+114 silly gunzTarPerm extractEntry test/many-errors.js
+115 silly gunzTarPerm modified mode [ 'test/many-errors.js', 420, 436 ]
+116 silly gunzTarPerm extractEntry test/query-sync.js
+117 silly gunzTarPerm modified mode [ 'test/query-sync.js', 420, 436 ]
+118 silly gunzTarPerm extractEntry test/multiple-queries.js
+119 silly gunzTarPerm modified mode [ 'test/multiple-queries.js', 420, 436 ]
+120 silly gunzTarPerm extractEntry test/copy-from.js
+121 silly gunzTarPerm modified mode [ 'test/copy-from.js', 420, 436 ]
+122 silly gunzTarPerm extractEntry test/notify.js
+123 silly gunzTarPerm modified mode [ 'test/notify.js', 420, 436 ]
+124 silly gunzTarPerm extractEntry test/connection.js
+125 silly gunzTarPerm modified mode [ 'test/connection.js', 420, 436 ]
+126 silly gunzTarPerm extractEntry test/prepare.js
+127 silly gunzTarPerm modified mode [ 'test/prepare.js', 420, 436 ]
+128 silly gunzTarPerm extractEntry test/cancel.js
+129 silly gunzTarPerm modified mode [ 'test/cancel.js', 420, 436 ]
+130 silly gunzTarPerm extractEntry test/query-async.js
+131 silly gunzTarPerm modified mode [ 'test/query-async.js', 420, 436 ]
+132 silly gunzTarPerm extractEntry test/index.js
+133 silly gunzTarPerm modified mode [ 'test/index.js', 420, 436 ]
+134 silly gunzTarPerm extractEntry test/version.js
+135 silly gunzTarPerm modified mode [ 'test/version.js', 420, 436 ]
+136 silly gunzTarPerm extractEntry test/load.js
+137 silly gunzTarPerm modified mode [ 'test/load.js', 420, 436 ]
+138 silly gunzTarPerm extractEntry test/mocha.opts
+139 silly gunzTarPerm modified mode [ 'test/mocha.opts', 420, 436 ]
+140 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/package.json
+141 info preinstall pg-native@1.9.0
+142 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/package.json
+143 silly prepareForInstallMany adding libpq@^1.7.0 from pg-native dependencies
+144 silly prepareForInstallMany adding pg-types@1.6.0 from pg-native dependencies
+145 silly prepareForInstallMany adding readable-stream@1.0.31 from pg-native dependencies
+146 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/package.json
+147 silly cache add args [ 'libpq@^1.7.0', null ]
+148 verbose cache add spec libpq@^1.7.0
+149 silly cache add args [ 'pg-types@1.6.0', null ]
+150 verbose cache add spec pg-types@1.6.0
+151 silly cache add parsed spec { raw: 'libpq@^1.7.0',
+151 silly cache add   scope: null,
+151 silly cache add   name: 'libpq',
+151 silly cache add   rawSpec: '^1.7.0',
+151 silly cache add   spec: '>=1.7.0 <2.0.0',
+151 silly cache add   type: 'range' }
+152 silly addNamed libpq@>=1.7.0 <2.0.0
+153 verbose addNamed ">=1.7.0 <2.0.0" is a valid semver range for libpq
+154 silly addNameRange { name: 'libpq', range: '>=1.7.0 <2.0.0', hasData: false }
+155 silly mapToRegistry name libpq
+156 silly mapToRegistry using default registry
+157 silly mapToRegistry registry https://registry.npmjs.org/
+158 silly mapToRegistry uri https://registry.npmjs.org/libpq
+159 verbose addNameRange registry:https://registry.npmjs.org/libpq not in flight; fetching
+160 silly cache add parsed spec { raw: 'pg-types@1.6.0',
+160 silly cache add   scope: null,
+160 silly cache add   name: 'pg-types',
+160 silly cache add   rawSpec: '1.6.0',
+160 silly cache add   spec: '1.6.0',
+160 silly cache add   type: 'version' }
+161 silly addNamed pg-types@1.6.0
+162 verbose addNamed "1.6.0" is a plain semver version for pg-types
+163 silly mapToRegistry name pg-types
+164 silly mapToRegistry using default registry
+165 silly mapToRegistry registry https://registry.npmjs.org/
+166 silly mapToRegistry uri https://registry.npmjs.org/pg-types
+167 verbose addNameVersion registry:https://registry.npmjs.org/pg-types not in flight; fetching
+168 silly cache add args [ 'readable-stream@1.0.31', null ]
+169 verbose cache add spec readable-stream@1.0.31
+170 silly cache add parsed spec { raw: 'readable-stream@1.0.31',
+170 silly cache add   scope: null,
+170 silly cache add   name: 'readable-stream',
+170 silly cache add   rawSpec: '1.0.31',
+170 silly cache add   spec: '1.0.31',
+170 silly cache add   type: 'version' }
+171 silly addNamed readable-stream@1.0.31
+172 verbose addNamed "1.0.31" is a plain semver version for readable-stream
+173 silly mapToRegistry name readable-stream
+174 silly mapToRegistry using default registry
+175 silly mapToRegistry registry https://registry.npmjs.org/
+176 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+177 verbose addNameVersion registry:https://registry.npmjs.org/readable-stream not in flight; fetching
+178 verbose request uri https://registry.npmjs.org/libpq
+179 verbose request no auth needed
+180 info attempt registry request try #1 at 13:34:56
+181 http request GET https://registry.npmjs.org/libpq
+182 verbose request uri https://registry.npmjs.org/pg-types
+183 verbose request no auth needed
+184 info attempt registry request try #1 at 13:34:56
+185 verbose etag "3SLWN60AAS73552S1ATZBWCW0"
+186 http request GET https://registry.npmjs.org/pg-types
+187 verbose request uri https://registry.npmjs.org/readable-stream
+188 verbose request no auth needed
+189 info attempt registry request try #1 at 13:34:56
+190 verbose etag "82TTSAI8QQG39EFUWDIODAL81"
+191 http request GET https://registry.npmjs.org/readable-stream
+192 http 304 https://registry.npmjs.org/readable-stream
+193 silly get cb [ 304,
+193 silly get   { date: 'Tue, 13 Oct 2015 10:34:55 GMT',
+193 silly get     via: '1.1 varnish',
+193 silly get     'cache-control': 'max-age=60',
+193 silly get     etag: '"82TTSAI8QQG39EFUWDIODAL81"',
+193 silly get     age: '0',
+193 silly get     connection: 'keep-alive',
+193 silly get     'x-served-by': 'cache-fra1238-FRA',
+193 silly get     'x-cache': 'HIT',
+193 silly get     'x-cache-hits': '1',
+193 silly get     'x-timer': 'S1444732495.488070,VS0,VE0',
+193 silly get     vary: 'Accept' } ]
+194 verbose etag https://registry.npmjs.org/readable-stream from cache
+195 verbose get saving readable-stream to /home/timetoburnfire/.npm/registry.npmjs.org/readable-stream/.cache.json
+196 silly mapToRegistry name readable-stream
+197 silly mapToRegistry using default registry
+198 silly mapToRegistry registry https://registry.npmjs.org/
+199 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+200 verbose addRemoteTarball https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz not in flight; adding
+201 verbose addRemoteTarball [ 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz',
+201 verbose addRemoteTarball   '8f2502e0bc9e3b0da1b94520aabb4e2603ecafae' ]
+202 http 304 https://registry.npmjs.org/pg-types
+203 silly get cb [ 304,
+203 silly get   { date: 'Tue, 13 Oct 2015 10:34:55 GMT',
+203 silly get     via: '1.1 varnish',
+203 silly get     'cache-control': 'max-age=60',
+203 silly get     etag: '"3SLWN60AAS73552S1ATZBWCW0"',
+203 silly get     age: '7',
+203 silly get     connection: 'keep-alive',
+203 silly get     'x-served-by': 'cache-fra1238-FRA',
+203 silly get     'x-cache': 'HIT',
+203 silly get     'x-cache-hits': '1',
+203 silly get     'x-timer': 'S1444732495.487562,VS0,VE0',
+203 silly get     vary: 'Accept' } ]
+204 verbose etag https://registry.npmjs.org/pg-types from cache
+205 verbose get saving pg-types to /home/timetoburnfire/.npm/registry.npmjs.org/pg-types/.cache.json
+206 info retry fetch attempt 1 at 13:34:56
+207 info attempt registry request try #1 at 13:34:56
+208 http fetch GET https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz
+209 silly mapToRegistry name pg-types
+210 silly mapToRegistry using default registry
+211 silly mapToRegistry registry https://registry.npmjs.org/
+212 silly mapToRegistry uri https://registry.npmjs.org/pg-types
+213 verbose addRemoteTarball https://registry.npmjs.org/pg-types/-/pg-types-1.6.0.tgz not in flight; adding
+214 verbose addRemoteTarball [ 'https://registry.npmjs.org/pg-types/-/pg-types-1.6.0.tgz',
+214 verbose addRemoteTarball   '3872a0f199143025497f4ee2a65fdaf00d7ea8b3' ]
+215 info retry fetch attempt 1 at 13:34:56
+216 info attempt registry request try #1 at 13:34:56
+217 http fetch GET https://registry.npmjs.org/pg-types/-/pg-types-1.6.0.tgz
+218 http fetch 200 https://registry.npmjs.org/pg-types/-/pg-types-1.6.0.tgz
+219 silly fetchAndShaCheck shasum 3872a0f199143025497f4ee2a65fdaf00d7ea8b3
+220 http 200 https://registry.npmjs.org/libpq
+221 silly get cb [ 200,
+221 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+221 silly get     etag: '"AE37WBCLJWD4XUC738LI1DA5"',
+221 silly get     'content-type': 'application/json',
+221 silly get     'cache-control': 'max-age=60',
+221 silly get     'content-length': '50516',
+221 silly get     'accept-ranges': 'bytes',
+221 silly get     date: 'Tue, 13 Oct 2015 10:34:55 GMT',
+221 silly get     via: '1.1 varnish',
+221 silly get     age: '0',
+221 silly get     connection: 'keep-alive',
+221 silly get     'x-served-by': 'cache-fra1227-FRA',
+221 silly get     'x-cache': 'MISS',
+221 silly get     'x-cache-hits': '0',
+221 silly get     'x-timer': 'S1444732495.475679,VS0,VE109',
+221 silly get     vary: 'Accept' } ]
+222 verbose get saving libpq to /home/timetoburnfire/.npm/registry.npmjs.org/libpq/.cache.json
+223 verbose addTmpTarball /tmp/npm-12308-a00fb20e/registry.npmjs.org/pg-types/-/pg-types-1.6.0.tgz not in flight; adding
+224 verbose addTmpTarball already have metadata; skipping unpack for pg-types@1.6.0
+225 silly addNameRange number 2 { name: 'libpq', range: '>=1.7.0 <2.0.0', hasData: true }
+226 silly addNameRange versions [ 'libpq',
+226 silly addNameRange   [ '0.2.0',
+226 silly addNameRange     '0.2.1',
+226 silly addNameRange     '0.2.2',
+226 silly addNameRange     '0.2.3',
+226 silly addNameRange     '0.2.4',
+226 silly addNameRange     '0.2.5',
+226 silly addNameRange     '0.3.0',
+226 silly addNameRange     '0.4.0',
+226 silly addNameRange     '0.4.1',
+226 silly addNameRange     '0.5.0',
+226 silly addNameRange     '0.5.1',
+226 silly addNameRange     '0.5.2',
+226 silly addNameRange     '0.5.3',
+226 silly addNameRange     '1.0.0',
+226 silly addNameRange     '1.0.1',
+226 silly addNameRange     '1.1.0',
+226 silly addNameRange     '1.2.0',
+226 silly addNameRange     '1.2.1',
+226 silly addNameRange     '1.3.0',
+226 silly addNameRange     '1.3.1',
+226 silly addNameRange     '1.4.0',
+226 silly addNameRange     '1.4.1',
+226 silly addNameRange     '1.4.2',
+226 silly addNameRange     '1.5.1',
+226 silly addNameRange     '1.6.0',
+226 silly addNameRange     '1.6.1',
+226 silly addNameRange     '1.6.2',
+226 silly addNameRange     '1.6.3',
+226 silly addNameRange     '1.6.4',
+226 silly addNameRange     '1.7.0' ] ]
+227 silly addNamed libpq@1.7.0
+228 verbose addNamed "1.7.0" is a plain semver version for libpq
+229 silly mapToRegistry name libpq
+230 silly mapToRegistry using default registry
+231 silly mapToRegistry registry https://registry.npmjs.org/
+232 silly mapToRegistry uri https://registry.npmjs.org/libpq
+233 verbose addRemoteTarball https://registry.npmjs.org/libpq/-/libpq-1.7.0.tgz not in flight; adding
+234 verbose addRemoteTarball [ 'https://registry.npmjs.org/libpq/-/libpq-1.7.0.tgz',
+234 verbose addRemoteTarball   '32dffda066adbd9959f684d21e52b6621bb873e4' ]
+235 silly cache afterAdd pg-types@1.6.0
+236 verbose afterAdd /home/timetoburnfire/.npm/pg-types/1.6.0/package/package.json not in flight; writing
+237 info retry fetch attempt 1 at 13:34:56
+238 info attempt registry request try #1 at 13:34:56
+239 http fetch GET https://registry.npmjs.org/libpq/-/libpq-1.7.0.tgz
+240 http fetch 200 https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz
+241 verbose afterAdd /home/timetoburnfire/.npm/pg-types/1.6.0/package/package.json written
+242 silly fetchAndShaCheck shasum 8f2502e0bc9e3b0da1b94520aabb4e2603ecafae
+243 verbose addTmpTarball /tmp/npm-12308-a00fb20e/registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz not in flight; adding
+244 verbose addTmpTarball already have metadata; skipping unpack for readable-stream@1.0.31
+245 silly cache afterAdd readable-stream@1.0.31
+246 verbose afterAdd /home/timetoburnfire/.npm/readable-stream/1.0.31/package/package.json not in flight; writing
+247 verbose afterAdd /home/timetoburnfire/.npm/readable-stream/1.0.31/package/package.json written
+248 http fetch 200 https://registry.npmjs.org/libpq/-/libpq-1.7.0.tgz
+249 silly fetchAndShaCheck shasum 32dffda066adbd9959f684d21e52b6621bb873e4
+250 verbose addTmpTarball /tmp/npm-12308-a00fb20e/registry.npmjs.org/libpq/-/libpq-1.7.0.tgz not in flight; adding
+251 verbose addTmpTarball already have metadata; skipping unpack for libpq@1.7.0
+252 silly cache afterAdd libpq@1.7.0
+253 verbose afterAdd /home/timetoburnfire/.npm/libpq/1.7.0/package/package.json not in flight; writing
+254 verbose afterAdd /home/timetoburnfire/.npm/libpq/1.7.0/package/package.json written
+255 silly install resolved [ { name: 'pg-types',
+255 silly install resolved     version: '1.6.0',
+255 silly install resolved     description: 'Query result type converters for node-postgres',
+255 silly install resolved     main: 'index.js',
+255 silly install resolved     scripts: { test: 'mocha' },
+255 silly install resolved     repository:
+255 silly install resolved      { type: 'git',
+255 silly install resolved        url: 'git://github.com/brianc/node-pg-types.git' },
+255 silly install resolved     keywords: [ 'postgres', 'PostgreSQL', 'pg' ],
+255 silly install resolved     author: { name: 'Brian M. Carlson' },
+255 silly install resolved     license: 'MIT',
+255 silly install resolved     bugs: { url: 'https://github.com/brianc/node-pg-types/issues' },
+255 silly install resolved     homepage: 'https://github.com/brianc/node-pg-types',
+255 silly install resolved     devDependencies: { mocha: '^1.18.0' },
+255 silly install resolved     _id: 'pg-types@1.6.0',
+255 silly install resolved     _shasum: '3872a0f199143025497f4ee2a65fdaf00d7ea8b3',
+255 silly install resolved     _from: 'pg-types@1.6.0',
+255 silly install resolved     _npmVersion: '1.4.9',
+255 silly install resolved     _npmUser: { name: 'brianc', email: 'brian.m.carlson@gmail.com' },
+255 silly install resolved     maintainers: [ [Object] ],
+255 silly install resolved     dist:
+255 silly install resolved      { shasum: '3872a0f199143025497f4ee2a65fdaf00d7ea8b3',
+255 silly install resolved        tarball: 'http://registry.npmjs.org/pg-types/-/pg-types-1.6.0.tgz' },
+255 silly install resolved     directories: {},
+255 silly install resolved     _resolved: 'https://registry.npmjs.org/pg-types/-/pg-types-1.6.0.tgz' },
+255 silly install resolved   { name: 'readable-stream',
+255 silly install resolved     version: '1.0.31',
+255 silly install resolved     description: 'Streams2, a user-land copy of the stream library from Node.js v0.10.x',
+255 silly install resolved     main: 'readable.js',
+255 silly install resolved     dependencies:
+255 silly install resolved      { 'core-util-is': '~1.0.0',
+255 silly install resolved        isarray: '0.0.1',
+255 silly install resolved        string_decoder: '~0.10.x',
+255 silly install resolved        inherits: '~2.0.1' },
+255 silly install resolved     devDependencies: { tap: '~0.2.6' },
+255 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+255 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/readable-stream' },
+255 silly install resolved     keywords: [ 'readable', 'stream', 'pipe' ],
+255 silly install resolved     browser: { util: false },
+255 silly install resolved     author:
+255 silly install resolved      { name: 'Isaac Z. Schlueter',
+255 silly install resolved        email: 'i@izs.me',
+255 silly install resolved        url: 'http://blog.izs.me/' },
+255 silly install resolved     license: 'MIT',
+255 silly install resolved     bugs: { url: 'https://github.com/isaacs/readable-stream/issues' },
+255 silly install resolved     homepage: 'https://github.com/isaacs/readable-stream',
+255 silly install resolved     _id: 'readable-stream@1.0.31',
+255 silly install resolved     _shasum: '8f2502e0bc9e3b0da1b94520aabb4e2603ecafae',
+255 silly install resolved     _from: 'readable-stream@1.0.31',
+255 silly install resolved     _npmVersion: '1.4.9',
+255 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+255 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+255 silly install resolved     dist:
+255 silly install resolved      { shasum: '8f2502e0bc9e3b0da1b94520aabb4e2603ecafae',
+255 silly install resolved        tarball: 'http://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz' },
+255 silly install resolved     directories: {},
+255 silly install resolved     _resolved: 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz' },
+255 silly install resolved   { name: 'libpq',
+255 silly install resolved     version: '1.7.0',
+255 silly install resolved     description: 'Low-level native bindings to PostgreSQL libpq',
+255 silly install resolved     main: 'index.js',
+255 silly install resolved     keywords: [ 'postgres', 'libpq' ],
+255 silly install resolved     repository: { type: 'git', url: 'git://github.com/brianc/node-libpq.git' },
+255 silly install resolved     scripts:
+255 silly install resolved      { test: 'node-gyp rebuild && node_modules/.bin/mocha',
+255 silly install resolved        install: 'node-gyp rebuild' },
+255 silly install resolved     author: { name: 'Brian M. Carlson' },
+255 silly install resolved     license: 'MIT',
+255 silly install resolved     dependencies: { nan: '^2.0.4', bindings: '1.2.1' },
+255 silly install resolved     devDependencies:
+255 silly install resolved      { async: '^0.9.0',
+255 silly install resolved        lodash: '^2.4.1',
+255 silly install resolved        mocha: '^1.21.4',
+255 silly install resolved        okay: '^0.3.0' },
+255 silly install resolved     gypfile: true,
+255 silly install resolved     gitHead: '6767eff332545d318bb7645aaecf81152cfbd4f4',
+255 silly install resolved     bugs: { url: 'https://github.com/brianc/node-libpq/issues' },
+255 silly install resolved     homepage: 'https://github.com/brianc/node-libpq#readme',
+255 silly install resolved     _id: 'libpq@1.7.0',
+255 silly install resolved     _shasum: '32dffda066adbd9959f684d21e52b6621bb873e4',
+255 silly install resolved     _from: 'libpq@>=1.7.0 <2.0.0',
+255 silly install resolved     _npmVersion: '2.11.3',
+255 silly install resolved     _nodeVersion: '0.12.7',
+255 silly install resolved     _npmUser: { name: 'brianc', email: 'brian.m.carlson@gmail.com' },
+255 silly install resolved     maintainers: [ [Object] ],
+255 silly install resolved     dist:
+255 silly install resolved      { shasum: '32dffda066adbd9959f684d21e52b6621bb873e4',
+255 silly install resolved        tarball: 'http://registry.npmjs.org/libpq/-/libpq-1.7.0.tgz' },
+255 silly install resolved     directories: {},
+255 silly install resolved     _resolved: 'https://registry.npmjs.org/libpq/-/libpq-1.7.0.tgz' } ]
+256 info install pg-types@1.6.0 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+257 info install readable-stream@1.0.31 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+258 info install libpq@1.7.0 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+259 info installOne pg-types@1.6.0
+260 verbose installOne of pg-types to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native not in flight; installing
+261 info installOne readable-stream@1.0.31
+262 verbose installOne of readable-stream to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native not in flight; installing
+263 info installOne libpq@1.7.0
+264 verbose installOne of libpq to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native not in flight; installing
+265 verbose lock using /home/timetoburnfire/.npm/_locks/pg-types-1820c2439e2a06df.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+266 verbose lock using /home/timetoburnfire/.npm/_locks/readable-stream-b12ab0882e19a60d.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+267 verbose lock using /home/timetoburnfire/.npm/_locks/libpq-7c0539bb6d53df34.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+268 silly install write writing pg-types 1.6.0 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+269 silly install write writing readable-stream 1.0.31 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+270 silly install write writing libpq 1.7.0 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+271 verbose unbuild node_modules/pg-native/node_modules/pg-types
+272 verbose unbuild node_modules/pg-native/node_modules/readable-stream
+273 verbose unbuild node_modules/pg-native/node_modules/libpq
+274 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+275 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+276 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+277 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+278 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+279 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+280 verbose tar unpack /home/timetoburnfire/.npm/pg-types/1.6.0/package.tgz
+281 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+282 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types is being purged
+283 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+284 verbose tar unpack /home/timetoburnfire/.npm/readable-stream/1.0.31/package.tgz
+285 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+286 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream is being purged
+287 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+288 verbose tar unpack /home/timetoburnfire/.npm/libpq/1.7.0/package.tgz
+289 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+290 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq is being purged
+291 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+292 silly gunzTarPerm modes [ '775', '664' ]
+293 silly gunzTarPerm modes [ '775', '664' ]
+294 silly gunzTarPerm modes [ '775', '664' ]
+295 silly gunzTarPerm extractEntry package.json
+296 silly gunzTarPerm extractEntry package.json
+297 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+298 silly gunzTarPerm extractEntry package.json
+299 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+300 silly gunzTarPerm extractEntry .npmignore
+301 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+302 silly gunzTarPerm extractEntry README.md
+303 silly gunzTarPerm extractEntry .npmignore
+304 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+305 silly gunzTarPerm extractEntry README.md
+306 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+307 silly gunzTarPerm extractEntry .npmignore
+308 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+309 silly gunzTarPerm extractEntry README.md
+310 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+311 silly gunzTarPerm extractEntry LICENSE
+312 silly gunzTarPerm extractEntry transform.js
+313 silly gunzTarPerm modified mode [ 'transform.js', 420, 436 ]
+314 silly gunzTarPerm extractEntry index.js
+315 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+316 silly gunzTarPerm extractEntry .travis.yml
+317 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+318 silly gunzTarPerm extractEntry index.js
+319 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+320 silly gunzTarPerm extractEntry duplex.js
+321 silly gunzTarPerm modified mode [ 'duplex.js', 420, 436 ]
+322 silly gunzTarPerm extractEntry readable.js
+323 silly gunzTarPerm extractEntry Makefile
+324 silly gunzTarPerm modified mode [ 'Makefile', 420, 436 ]
+325 silly gunzTarPerm extractEntry lib/arrayParser.js
+326 silly gunzTarPerm modified mode [ 'lib/arrayParser.js', 420, 436 ]
+327 silly gunzTarPerm extractEntry binding.gyp
+328 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 436 ]
+329 silly gunzTarPerm extractEntry .travis.yml
+330 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+331 silly gunzTarPerm extractEntry Makefile
+332 silly gunzTarPerm modified mode [ 'Makefile', 420, 436 ]
+333 silly gunzTarPerm extractEntry passthrough.js
+334 silly gunzTarPerm modified mode [ 'passthrough.js', 420, 436 ]
+335 silly gunzTarPerm extractEntry writable.js
+336 silly gunzTarPerm modified mode [ 'writable.js', 420, 436 ]
+337 silly gunzTarPerm extractEntry lib/binaryParsers.js
+338 silly gunzTarPerm modified mode [ 'lib/binaryParsers.js', 420, 436 ]
+339 silly gunzTarPerm extractEntry lib/textParsers.js
+340 silly gunzTarPerm modified mode [ 'lib/textParsers.js', 420, 436 ]
+341 silly gunzTarPerm extractEntry test/array.js
+342 silly gunzTarPerm modified mode [ 'test/array.js', 420, 436 ]
+343 silly gunzTarPerm extractEntry test/assert.js
+344 silly gunzTarPerm modified mode [ 'test/assert.js', 420, 436 ]
+345 silly gunzTarPerm extractEntry test/dates.js
+346 silly gunzTarPerm modified mode [ 'test/dates.js', 420, 436 ]
+347 silly gunzTarPerm extractEntry test/index.js
+348 silly gunzTarPerm modified mode [ 'test/index.js', 420, 436 ]
+349 silly gunzTarPerm extractEntry lib/_stream_duplex.js
+350 silly gunzTarPerm extractEntry lib/_stream_passthrough.js
+351 silly gunzTarPerm extractEntry lib/_stream_readable.js
+352 silly gunzTarPerm extractEntry src/addon.cc
+353 silly gunzTarPerm modified mode [ 'src/addon.cc', 420, 436 ]
+354 silly gunzTarPerm extractEntry lib/_stream_transform.js
+355 silly gunzTarPerm extractEntry lib/_stream_writable.js
+356 silly gunzTarPerm extractEntry src/addon.h
+357 silly gunzTarPerm modified mode [ 'src/addon.h', 420, 436 ]
+358 silly gunzTarPerm extractEntry src/connect-async-worker.cc
+359 silly gunzTarPerm modified mode [ 'src/connect-async-worker.cc', 420, 436 ]
+360 silly gunzTarPerm extractEntry src/connect-async-worker.h
+361 silly gunzTarPerm modified mode [ 'src/connect-async-worker.h', 420, 436 ]
+362 silly gunzTarPerm extractEntry src/connection.cc
+363 silly gunzTarPerm modified mode [ 'src/connection.cc', 420, 436 ]
+364 silly gunzTarPerm extractEntry src/connection.h
+365 silly gunzTarPerm modified mode [ 'src/connection.h', 420, 436 ]
+366 silly gunzTarPerm extractEntry test/async-connection.js
+367 silly gunzTarPerm modified mode [ 'test/async-connection.js', 420, 436 ]
+368 silly gunzTarPerm extractEntry test/error-info.js
+369 silly gunzTarPerm modified mode [ 'test/error-info.js', 420, 436 ]
+370 silly gunzTarPerm extractEntry test/escaping.js
+371 silly gunzTarPerm modified mode [ 'test/escaping.js', 420, 436 ]
+372 silly gunzTarPerm extractEntry test/helper.js
+373 silly gunzTarPerm modified mode [ 'test/helper.js', 420, 436 ]
+374 silly gunzTarPerm extractEntry test/index.js
+375 silly gunzTarPerm modified mode [ 'test/index.js', 420, 436 ]
+376 silly gunzTarPerm extractEntry test/error-conditions.js
+377 silly gunzTarPerm modified mode [ 'test/error-conditions.js', 420, 436 ]
+378 silly gunzTarPerm extractEntry test/many-connections.js
+379 silly gunzTarPerm modified mode [ 'test/many-connections.js', 420, 436 ]
+380 silly gunzTarPerm extractEntry test/sync-prepare.js
+381 silly gunzTarPerm modified mode [ 'test/sync-prepare.js', 420, 436 ]
+382 silly gunzTarPerm extractEntry test/multiple-queries.js
+383 silly gunzTarPerm modified mode [ 'test/multiple-queries.js', 420, 436 ]
+384 silly gunzTarPerm extractEntry test/non-blocking-controls.js
+385 silly gunzTarPerm modified mode [ 'test/non-blocking-controls.js', 420, 436 ]
+386 silly gunzTarPerm extractEntry test/notification.js
+387 silly gunzTarPerm modified mode [ 'test/notification.js', 420, 436 ]
+388 silly gunzTarPerm extractEntry test/copy-out.js
+389 silly gunzTarPerm modified mode [ 'test/copy-out.js', 420, 436 ]
+390 silly gunzTarPerm extractEntry test/result-accessors.js
+391 silly gunzTarPerm modified mode [ 'test/result-accessors.js', 420, 436 ]
+392 silly gunzTarPerm extractEntry test/copy-in.js
+393 silly gunzTarPerm modified mode [ 'test/copy-in.js', 420, 436 ]
+394 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types/package.json
+395 info preinstall pg-types@1.6.0
+396 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types/package.json
+397 silly gunzTarPerm extractEntry test/socket.js
+398 silly gunzTarPerm modified mode [ 'test/socket.js', 420, 436 ]
+399 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types/package.json
+400 silly gunzTarPerm extractEntry test/construction.js
+401 silly gunzTarPerm modified mode [ 'test/construction.js', 420, 436 ]
+402 silly gunzTarPerm extractEntry test/sync-integration.js
+403 silly gunzTarPerm modified mode [ 'test/sync-integration.js', 420, 436 ]
+404 silly install resolved []
+405 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+406 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+407 silly gunzTarPerm extractEntry test/cancel.js
+408 silly gunzTarPerm modified mode [ 'test/cancel.js', 420, 436 ]
+409 silly gunzTarPerm extractEntry test/sync-parameters.js
+410 silly gunzTarPerm modified mode [ 'test/sync-parameters.js', 420, 436 ]
+411 info linkStuff pg-types@1.6.0
+412 silly linkStuff pg-types@1.6.0 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules as its parent node_modules
+413 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/package.json
+414 info preinstall readable-stream@1.0.31
+415 silly gunzTarPerm extractEntry test/async-socket.js
+416 silly gunzTarPerm modified mode [ 'test/async-socket.js', 420, 436 ]
+417 silly gunzTarPerm extractEntry test/sync.js
+418 silly gunzTarPerm modified mode [ 'test/sync.js', 420, 436 ]
+419 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/package.json
+420 verbose linkBins pg-types@1.6.0
+421 verbose linkMans pg-types@1.6.0
+422 verbose rebuildBundles pg-types@1.6.0
+423 info install pg-types@1.6.0
+424 info postinstall pg-types@1.6.0
+425 verbose unlock done using /home/timetoburnfire/.npm/_locks/pg-types-1820c2439e2a06df.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/pg-types
+426 silly prepareForInstallMany adding core-util-is@~1.0.0 from readable-stream dependencies
+427 silly prepareForInstallMany adding isarray@0.0.1 from readable-stream dependencies
+428 silly prepareForInstallMany adding string_decoder@~0.10.x from readable-stream dependencies
+429 silly prepareForInstallMany adding inherits@~2.0.1 from readable-stream dependencies
+430 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/package.json
+431 silly gunzTarPerm extractEntry test/load.js
+432 silly gunzTarPerm modified mode [ 'test/load.js', 420, 436 ]
+433 silly gunzTarPerm extractEntry test/mocha.opts
+434 silly gunzTarPerm modified mode [ 'test/mocha.opts', 420, 436 ]
+435 silly cache add args [ 'core-util-is@~1.0.0', null ]
+436 verbose cache add spec core-util-is@~1.0.0
+437 silly cache add args [ 'isarray@0.0.1', null ]
+438 verbose cache add spec isarray@0.0.1
+439 silly cache add parsed spec { raw: 'core-util-is@~1.0.0',
+439 silly cache add   scope: null,
+439 silly cache add   name: 'core-util-is',
+439 silly cache add   rawSpec: '~1.0.0',
+439 silly cache add   spec: '>=1.0.0 <1.1.0',
+439 silly cache add   type: 'range' }
+440 silly addNamed core-util-is@>=1.0.0 <1.1.0
+441 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for core-util-is
+442 silly addNameRange { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: false }
+443 silly mapToRegistry name core-util-is
+444 silly mapToRegistry using default registry
+445 silly mapToRegistry registry https://registry.npmjs.org/
+446 silly mapToRegistry uri https://registry.npmjs.org/core-util-is
+447 verbose addNameRange registry:https://registry.npmjs.org/core-util-is not in flight; fetching
+448 silly cache add parsed spec { raw: 'isarray@0.0.1',
+448 silly cache add   scope: null,
+448 silly cache add   name: 'isarray',
+448 silly cache add   rawSpec: '0.0.1',
+448 silly cache add   spec: '0.0.1',
+448 silly cache add   type: 'version' }
+449 silly addNamed isarray@0.0.1
+450 verbose addNamed "0.0.1" is a plain semver version for isarray
+451 silly mapToRegistry name isarray
+452 silly mapToRegistry using default registry
+453 silly mapToRegistry registry https://registry.npmjs.org/
+454 silly mapToRegistry uri https://registry.npmjs.org/isarray
+455 verbose addNameVersion registry:https://registry.npmjs.org/isarray not in flight; fetching
+456 silly cache add args [ 'string_decoder@~0.10.x', null ]
+457 verbose cache add spec string_decoder@~0.10.x
+458 silly cache add parsed spec { raw: 'string_decoder@~0.10.x',
+458 silly cache add   scope: null,
+458 silly cache add   name: 'string_decoder',
+458 silly cache add   rawSpec: '~0.10.x',
+458 silly cache add   spec: '>=0.10.0 <0.11.0',
+458 silly cache add   type: 'range' }
+459 silly addNamed string_decoder@>=0.10.0 <0.11.0
+460 verbose addNamed ">=0.10.0 <0.11.0" is a valid semver range for string_decoder
+461 silly addNameRange { name: 'string_decoder',
+461 silly addNameRange   range: '>=0.10.0 <0.11.0',
+461 silly addNameRange   hasData: false }
+462 silly mapToRegistry name string_decoder
+463 silly mapToRegistry using default registry
+464 silly mapToRegistry registry https://registry.npmjs.org/
+465 silly mapToRegistry uri https://registry.npmjs.org/string_decoder
+466 verbose addNameRange registry:https://registry.npmjs.org/string_decoder not in flight; fetching
+467 silly cache add args [ 'inherits@~2.0.1', null ]
+468 verbose cache add spec inherits@~2.0.1
+469 silly cache add parsed spec { raw: 'inherits@~2.0.1',
+469 silly cache add   scope: null,
+469 silly cache add   name: 'inherits',
+469 silly cache add   rawSpec: '~2.0.1',
+469 silly cache add   spec: '>=2.0.1 <2.1.0',
+469 silly cache add   type: 'range' }
+470 silly addNamed inherits@>=2.0.1 <2.1.0
+471 verbose addNamed ">=2.0.1 <2.1.0" is a valid semver range for inherits
+472 silly addNameRange { name: 'inherits', range: '>=2.0.1 <2.1.0', hasData: false }
+473 silly mapToRegistry name inherits
+474 silly mapToRegistry using default registry
+475 silly mapToRegistry registry https://registry.npmjs.org/
+476 silly mapToRegistry uri https://registry.npmjs.org/inherits
+477 verbose addNameRange registry:https://registry.npmjs.org/inherits not in flight; fetching
+478 verbose request uri https://registry.npmjs.org/core-util-is
+479 verbose request no auth needed
+480 info attempt registry request try #1 at 13:34:56
+481 verbose etag "5I217NCLWQDRJQ3JWN5TWVB2K"
+482 http request GET https://registry.npmjs.org/core-util-is
+483 verbose request uri https://registry.npmjs.org/isarray
+484 verbose request no auth needed
+485 info attempt registry request try #1 at 13:34:56
+486 verbose etag "79XQA3ZXVF5QN0X2VYCD81HMN"
+487 http request GET https://registry.npmjs.org/isarray
+488 verbose request uri https://registry.npmjs.org/string_decoder
+489 verbose request no auth needed
+490 info attempt registry request try #1 at 13:34:56
+491 verbose etag "3SLQP4XEWUIBONOV855WOPR0B"
+492 http request GET https://registry.npmjs.org/string_decoder
+493 verbose request uri https://registry.npmjs.org/inherits
+494 verbose request no auth needed
+495 info attempt registry request try #1 at 13:34:56
+496 verbose etag "83S1U6S25IVR6LLBMEY64SYT2"
+497 http request GET https://registry.npmjs.org/inherits
+498 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/package.json
+499 info preinstall libpq@1.7.0
+500 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/package.json
+501 silly prepareForInstallMany adding nan@^2.0.4 from libpq dependencies
+502 silly prepareForInstallMany adding bindings@1.2.1 from libpq dependencies
+503 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/package.json
+504 silly cache add args [ 'nan@^2.0.4', null ]
+505 verbose cache add spec nan@^2.0.4
+506 silly cache add args [ 'bindings@1.2.1', null ]
+507 verbose cache add spec bindings@1.2.1
+508 silly cache add parsed spec { raw: 'nan@^2.0.4',
+508 silly cache add   scope: null,
+508 silly cache add   name: 'nan',
+508 silly cache add   rawSpec: '^2.0.4',
+508 silly cache add   spec: '>=2.0.4 <3.0.0',
+508 silly cache add   type: 'range' }
+509 silly addNamed nan@>=2.0.4 <3.0.0
+510 verbose addNamed ">=2.0.4 <3.0.0" is a valid semver range for nan
+511 silly addNameRange { name: 'nan', range: '>=2.0.4 <3.0.0', hasData: false }
+512 silly mapToRegistry name nan
+513 silly mapToRegistry using default registry
+514 silly mapToRegistry registry https://registry.npmjs.org/
+515 silly mapToRegistry uri https://registry.npmjs.org/nan
+516 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+517 silly cache add parsed spec { raw: 'bindings@1.2.1',
+517 silly cache add   scope: null,
+517 silly cache add   name: 'bindings',
+517 silly cache add   rawSpec: '1.2.1',
+517 silly cache add   spec: '1.2.1',
+517 silly cache add   type: 'version' }
+518 silly addNamed bindings@1.2.1
+519 verbose addNamed "1.2.1" is a plain semver version for bindings
+520 silly mapToRegistry name bindings
+521 silly mapToRegistry using default registry
+522 silly mapToRegistry registry https://registry.npmjs.org/
+523 silly mapToRegistry uri https://registry.npmjs.org/bindings
+524 verbose addNameVersion registry:https://registry.npmjs.org/bindings not in flight; fetching
+525 verbose request uri https://registry.npmjs.org/nan
+526 verbose request no auth needed
+527 info attempt registry request try #1 at 13:34:56
+528 http request GET https://registry.npmjs.org/nan
+529 verbose request uri https://registry.npmjs.org/bindings
+530 verbose request no auth needed
+531 info attempt registry request try #1 at 13:34:56
+532 http request GET https://registry.npmjs.org/bindings
+533 http 304 https://registry.npmjs.org/isarray
+534 silly get cb [ 304,
+534 silly get   { date: 'Tue, 13 Oct 2015 10:34:56 GMT',
+534 silly get     via: '1.1 varnish',
+534 silly get     'cache-control': 'max-age=60',
+534 silly get     etag: '"79XQA3ZXVF5QN0X2VYCD81HMN"',
+534 silly get     age: '35',
+534 silly get     connection: 'keep-alive',
+534 silly get     'x-served-by': 'cache-fra1225-FRA',
+534 silly get     'x-cache': 'HIT',
+534 silly get     'x-cache-hits': '2',
+534 silly get     'x-timer': 'S1444732496.182131,VS0,VE0',
+534 silly get     vary: 'Accept' } ]
+535 verbose etag https://registry.npmjs.org/isarray from cache
+536 verbose get saving isarray to /home/timetoburnfire/.npm/registry.npmjs.org/isarray/.cache.json
+537 http 304 https://registry.npmjs.org/core-util-is
+538 silly get cb [ 304,
+538 silly get   { date: 'Tue, 13 Oct 2015 10:34:56 GMT',
+538 silly get     via: '1.1 varnish',
+538 silly get     'cache-control': 'max-age=60',
+538 silly get     etag: '"5I217NCLWQDRJQ3JWN5TWVB2K"',
+538 silly get     age: '3',
+538 silly get     connection: 'keep-alive',
+538 silly get     'x-served-by': 'cache-fra1235-FRA',
+538 silly get     'x-cache': 'HIT',
+538 silly get     'x-cache-hits': '1',
+538 silly get     'x-timer': 'S1444732496.185361,VS0,VE0',
+538 silly get     vary: 'Accept' } ]
+539 verbose etag https://registry.npmjs.org/core-util-is from cache
+540 verbose get saving core-util-is to /home/timetoburnfire/.npm/registry.npmjs.org/core-util-is/.cache.json
+541 http 304 https://registry.npmjs.org/string_decoder
+542 silly get cb [ 304,
+542 silly get   { date: 'Tue, 13 Oct 2015 10:34:56 GMT',
+542 silly get     via: '1.1 varnish',
+542 silly get     'cache-control': 'max-age=60',
+542 silly get     etag: '"3SLQP4XEWUIBONOV855WOPR0B"',
+542 silly get     age: '9',
+542 silly get     connection: 'keep-alive',
+542 silly get     'x-served-by': 'cache-fra1241-FRA',
+542 silly get     'x-cache': 'HIT',
+542 silly get     'x-cache-hits': '2',
+542 silly get     'x-timer': 'S1444732496.184839,VS0,VE0',
+542 silly get     vary: 'Accept' } ]
+543 verbose etag https://registry.npmjs.org/string_decoder from cache
+544 verbose get saving string_decoder to /home/timetoburnfire/.npm/registry.npmjs.org/string_decoder/.cache.json
+545 silly addNameRange number 2 { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: true }
+546 silly addNameRange versions [ 'core-util-is', [ '1.0.0', '1.0.1' ] ]
+547 silly addNamed core-util-is@1.0.1
+548 verbose addNamed "1.0.1" is a plain semver version for core-util-is
+549 silly addNameRange number 2 { name: 'string_decoder',
+549 silly addNameRange   range: '>=0.10.0 <0.11.0',
+549 silly addNameRange   hasData: true }
+550 silly addNameRange versions [ 'string_decoder',
+550 silly addNameRange   [ '0.0.0',
+550 silly addNameRange     '0.0.1',
+550 silly addNameRange     '0.10.24',
+550 silly addNameRange     '0.11.10',
+550 silly addNameRange     '0.10.25',
+550 silly addNameRange     '0.11.10-1',
+550 silly addNameRange     '0.10.25-1',
+550 silly addNameRange     '0.10.31' ] ]
+551 silly addNamed string_decoder@0.10.31
+552 verbose addNamed "0.10.31" is a plain semver version for string_decoder
+553 http 304 https://registry.npmjs.org/inherits
+554 silly get cb [ 304,
+554 silly get   { date: 'Tue, 13 Oct 2015 10:34:56 GMT',
+554 silly get     via: '1.1 varnish',
+554 silly get     'cache-control': 'max-age=60',
+554 silly get     etag: '"83S1U6S25IVR6LLBMEY64SYT2"',
+554 silly get     age: '7',
+554 silly get     connection: 'keep-alive',
+554 silly get     'x-served-by': 'cache-fra1220-FRA',
+554 silly get     'x-cache': 'HIT',
+554 silly get     'x-cache-hits': '3',
+554 silly get     'x-timer': 'S1444732496.191563,VS0,VE0',
+554 silly get     vary: 'Accept' } ]
+555 verbose etag https://registry.npmjs.org/inherits from cache
+556 verbose get saving inherits to /home/timetoburnfire/.npm/registry.npmjs.org/inherits/.cache.json
+557 silly cache afterAdd isarray@0.0.1
+558 verbose afterAdd /home/timetoburnfire/.npm/isarray/0.0.1/package/package.json not in flight; writing
+559 silly cache afterAdd core-util-is@1.0.1
+560 verbose afterAdd /home/timetoburnfire/.npm/core-util-is/1.0.1/package/package.json not in flight; writing
+561 silly cache afterAdd string_decoder@0.10.31
+562 verbose afterAdd /home/timetoburnfire/.npm/string_decoder/0.10.31/package/package.json not in flight; writing
+563 verbose afterAdd /home/timetoburnfire/.npm/isarray/0.0.1/package/package.json written
+564 verbose afterAdd /home/timetoburnfire/.npm/core-util-is/1.0.1/package/package.json written
+565 silly addNameRange number 2 { name: 'inherits', range: '>=2.0.1 <2.1.0', hasData: true }
+566 silly addNameRange versions [ 'inherits', [ '1.0.0', '2.0.0', '2.0.1', '1.0.1', '1.0.2' ] ]
+567 silly addNamed inherits@2.0.1
+568 verbose addNamed "2.0.1" is a plain semver version for inherits
+569 verbose afterAdd /home/timetoburnfire/.npm/string_decoder/0.10.31/package/package.json written
+570 silly cache afterAdd inherits@2.0.1
+571 verbose afterAdd /home/timetoburnfire/.npm/inherits/2.0.1/package/package.json not in flight; writing
+572 verbose afterAdd /home/timetoburnfire/.npm/inherits/2.0.1/package/package.json written
+573 silly install resolved [ { name: 'isarray',
+573 silly install resolved     description: 'Array#isArray for older browsers',
+573 silly install resolved     version: '0.0.1',
+573 silly install resolved     repository:
+573 silly install resolved      { type: 'git',
+573 silly install resolved        url: 'git://github.com/juliangruber/isarray.git' },
+573 silly install resolved     homepage: 'https://github.com/juliangruber/isarray',
+573 silly install resolved     main: 'index.js',
+573 silly install resolved     scripts: { test: 'tap test/*.js' },
+573 silly install resolved     dependencies: {},
+573 silly install resolved     devDependencies: { tap: '*' },
+573 silly install resolved     keywords: [ 'browser', 'isarray', 'array' ],
+573 silly install resolved     author:
+573 silly install resolved      { name: 'Julian Gruber',
+573 silly install resolved        email: 'mail@juliangruber.com',
+573 silly install resolved        url: 'http://juliangruber.com' },
+573 silly install resolved     license: 'MIT',
+573 silly install resolved     _id: 'isarray@0.0.1',
+573 silly install resolved     dist:
+573 silly install resolved      { shasum: '8a18acfca9a8f4177e09abfc6038939b05d1eedf',
+573 silly install resolved        tarball: 'http://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz' },
+573 silly install resolved     _from: 'isarray@0.0.1',
+573 silly install resolved     _npmVersion: '1.2.18',
+573 silly install resolved     _npmUser: { name: 'juliangruber', email: 'julian@juliangruber.com' },
+573 silly install resolved     maintainers: [ [Object] ],
+573 silly install resolved     directories: {},
+573 silly install resolved     _shasum: '8a18acfca9a8f4177e09abfc6038939b05d1eedf',
+573 silly install resolved     _resolved: 'https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz',
+573 silly install resolved     bugs: { url: 'https://github.com/juliangruber/isarray/issues' },
+573 silly install resolved     readme: 'ERROR: No README data found!' },
+573 silly install resolved   { name: 'core-util-is',
+573 silly install resolved     version: '1.0.1',
+573 silly install resolved     description: 'The `util.is*` functions introduced in Node v0.12.',
+573 silly install resolved     main: 'lib/util.js',
+573 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/core-util-is.git' },
+573 silly install resolved     keywords:
+573 silly install resolved      [ 'util',
+573 silly install resolved        'isBuffer',
+573 silly install resolved        'isArray',
+573 silly install resolved        'isNumber',
+573 silly install resolved        'isString',
+573 silly install resolved        'isRegExp',
+573 silly install resolved        'isThis',
+573 silly install resolved        'isThat',
+573 silly install resolved        'polyfill' ],
+573 silly install resolved     author:
+573 silly install resolved      { name: 'Isaac Z. Schlueter',
+573 silly install resolved        email: 'i@izs.me',
+573 silly install resolved        url: 'http://blog.izs.me/' },
+573 silly install resolved     license: 'MIT',
+573 silly install resolved     bugs: { url: 'https://github.com/isaacs/core-util-is/issues' },
+573 silly install resolved     readme: '# core-util-is\n\nThe `util.is*` functions introduced in Node v0.12.\n',
+573 silly install resolved     readmeFilename: 'README.md',
+573 silly install resolved     homepage: 'https://github.com/isaacs/core-util-is',
+573 silly install resolved     _id: 'core-util-is@1.0.1',
+573 silly install resolved     dist:
+573 silly install resolved      { shasum: '6b07085aef9a3ccac6ee53bf9d3df0c1521a5538',
+573 silly install resolved        tarball: 'http://registry.npmjs.org/core-util-is/-/core-util-is-1.0.1.tgz' },
+573 silly install resolved     _from: 'core-util-is@>=1.0.0 <1.1.0',
+573 silly install resolved     _npmVersion: '1.3.23',
+573 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+573 silly install resolved     maintainers: [ [Object] ],
+573 silly install resolved     directories: {},
+573 silly install resolved     _shasum: '6b07085aef9a3ccac6ee53bf9d3df0c1521a5538',
+573 silly install resolved     _resolved: 'https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.1.tgz' },
+573 silly install resolved   { name: 'string_decoder',
+573 silly install resolved     version: '0.10.31',
+573 silly install resolved     description: 'The string_decoder module from Node core',
+573 silly install resolved     main: 'index.js',
+573 silly install resolved     dependencies: {},
+573 silly install resolved     devDependencies: { tap: '~0.4.8' },
+573 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+573 silly install resolved     repository:
+573 silly install resolved      { type: 'git',
+573 silly install resolved        url: 'git://github.com/rvagg/string_decoder.git' },
+573 silly install resolved     homepage: 'https://github.com/rvagg/string_decoder',
+573 silly install resolved     keywords: [ 'string', 'decoder', 'browser', 'browserify' ],
+573 silly install resolved     license: 'MIT',
+573 silly install resolved     gitHead: 'd46d4fd87cf1d06e031c23f1ba170ca7d4ade9a0',
+573 silly install resolved     bugs: { url: 'https://github.com/rvagg/string_decoder/issues' },
+573 silly install resolved     _id: 'string_decoder@0.10.31',
+573 silly install resolved     _shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+573 silly install resolved     _from: 'string_decoder@>=0.10.0 <0.11.0',
+573 silly install resolved     _npmVersion: '1.4.23',
+573 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+573 silly install resolved     maintainers: [ [Object], [Object] ],
+573 silly install resolved     dist:
+573 silly install resolved      { shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+573 silly install resolved        tarball: 'http://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz' },
+573 silly install resolved     directories: {},
+573 silly install resolved     _resolved: 'https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz',
+573 silly install resolved     readme: 'ERROR: No README data found!' },
+573 silly install resolved   { name: 'inherits',
+573 silly install resolved     description: 'Browser-friendly inheritance fully compatible with standard node.js inherits()',
+573 silly install resolved     version: '2.0.1',
+573 silly install resolved     keywords:
+573 silly install resolved      [ 'inheritance',
+573 silly install resolved        'class',
+573 silly install resolved        'klass',
+573 silly install resolved        'oop',
+573 silly install resolved        'object-oriented',
+573 silly install resolved        'inherits',
+573 silly install resolved        'browser',
+573 silly install resolved        'browserify' ],
+573 silly install resolved     main: './inherits.js',
+573 silly install resolved     browser: './inherits_browser.js',
+573 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/inherits.git' },
+573 silly install resolved     license: 'ISC',
+573 silly install resolved     scripts: { test: 'node test' },
+573 silly install resolved     bugs: { url: 'https://github.com/isaacs/inherits/issues' },
+573 silly install resolved     _id: 'inherits@2.0.1',
+573 silly install resolved     dist:
+573 silly install resolved      { shasum: 'b17d08d326b4423e568eff719f91b0b1cbdf69f1',
+573 silly install resolved        tarball: 'http://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz' },
+573 silly install resolved     _from: 'inherits@>=2.0.1 <2.1.0',
+573 silly install resolved     _npmVersion: '1.3.8',
+573 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+573 silly install resolved     maintainers: [ [Object] ],
+573 silly install resolved     directories: {},
+573 silly install resolved     _shasum: 'b17d08d326b4423e568eff719f91b0b1cbdf69f1',
+573 silly install resolved     _resolved: 'https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz',
+573 silly install resolved     readme: 'ERROR: No README data found!',
+573 silly install resolved     homepage: 'https://github.com/isaacs/inherits#readme' } ]
+574 info install isarray@0.0.1 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+575 info install core-util-is@1.0.1 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+576 info install string_decoder@0.10.31 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+577 info install inherits@2.0.1 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+578 info installOne isarray@0.0.1
+579 verbose installOne of isarray to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream not in flight; installing
+580 info installOne core-util-is@1.0.1
+581 verbose installOne of core-util-is to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream not in flight; installing
+582 info installOne string_decoder@0.10.31
+583 verbose installOne of string_decoder to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream not in flight; installing
+584 info installOne inherits@2.0.1
+585 verbose installOne of inherits to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream not in flight; installing
+586 verbose lock using /home/timetoburnfire/.npm/_locks/isarray-1c03d45c967acbbc.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+587 verbose lock using /home/timetoburnfire/.npm/_locks/core-util-is-8bf6995c49267360.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+588 verbose lock using /home/timetoburnfire/.npm/_locks/string-decoder-55b63874965d45f7.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+589 verbose lock using /home/timetoburnfire/.npm/_locks/inherits-b821ea2a99773736.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+590 silly install write writing isarray 0.0.1 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+591 silly install write writing core-util-is 1.0.1 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+592 silly install write writing string_decoder 0.10.31 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+593 silly install write writing inherits 2.0.1 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+594 verbose unbuild node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+595 verbose unbuild node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+596 verbose unbuild node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+597 verbose unbuild node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+598 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+599 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+600 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+601 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+602 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+603 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+604 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+605 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+606 verbose tar unpack /home/timetoburnfire/.npm/isarray/0.0.1/package.tgz
+607 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+608 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray is being purged
+609 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+610 verbose tar unpack /home/timetoburnfire/.npm/core-util-is/1.0.1/package.tgz
+611 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+612 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is is being purged
+613 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+614 verbose tar unpack /home/timetoburnfire/.npm/string_decoder/0.10.31/package.tgz
+615 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+616 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder is being purged
+617 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+618 verbose tar unpack /home/timetoburnfire/.npm/inherits/2.0.1/package.tgz
+619 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+620 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits is being purged
+621 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+622 silly gunzTarPerm modes [ '775', '664' ]
+623 silly gunzTarPerm modes [ '775', '664' ]
+624 silly gunzTarPerm modes [ '775', '664' ]
+625 silly gunzTarPerm modes [ '775', '664' ]
+626 silly gunzTarPerm extractEntry package.json
+627 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+628 silly gunzTarPerm extractEntry package.json
+629 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+630 silly gunzTarPerm extractEntry package.json
+631 silly gunzTarPerm extractEntry package.json
+632 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+633 silly gunzTarPerm extractEntry README.md
+634 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+635 silly gunzTarPerm extractEntry index.js
+636 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+637 silly gunzTarPerm extractEntry README.md
+638 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+639 silly gunzTarPerm extractEntry util.js
+640 silly gunzTarPerm modified mode [ 'util.js', 420, 436 ]
+641 silly gunzTarPerm extractEntry .npmignore
+642 silly gunzTarPerm extractEntry README.md
+643 silly gunzTarPerm extractEntry README.md
+644 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+645 silly gunzTarPerm extractEntry LICENSE
+646 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+647 silly gunzTarPerm extractEntry build/build.js
+648 silly gunzTarPerm modified mode [ 'build/build.js', 420, 436 ]
+649 silly gunzTarPerm extractEntry component.json
+650 silly gunzTarPerm modified mode [ 'component.json', 420, 436 ]
+651 silly gunzTarPerm extractEntry inherits.js
+652 silly gunzTarPerm modified mode [ 'inherits.js', 420, 436 ]
+653 silly gunzTarPerm extractEntry inherits_browser.js
+654 silly gunzTarPerm modified mode [ 'inherits_browser.js', 420, 436 ]
+655 silly gunzTarPerm extractEntry float.patch
+656 silly gunzTarPerm modified mode [ 'float.patch', 420, 436 ]
+657 silly gunzTarPerm extractEntry lib/util.js
+658 silly gunzTarPerm modified mode [ 'lib/util.js', 420, 436 ]
+659 silly gunzTarPerm extractEntry LICENSE
+660 silly gunzTarPerm extractEntry index.js
+661 silly gunzTarPerm extractEntry test.js
+662 silly gunzTarPerm modified mode [ 'test.js', 420, 436 ]
+663 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray/package.json
+664 http 200 https://registry.npmjs.org/bindings
+665 silly get cb [ 200,
+665 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+665 silly get     etag: '"547Q3C60W4DUGPOZ65YOO6930"',
+665 silly get     'content-type': 'application/json',
+665 silly get     'cache-control': 'max-age=60',
+665 silly get     'content-length': '18018',
+665 silly get     'accept-ranges': 'bytes',
+665 silly get     date: 'Tue, 13 Oct 2015 10:34:56 GMT',
+665 silly get     via: '1.1 varnish',
+665 silly get     age: '46',
+665 silly get     connection: 'keep-alive',
+665 silly get     'x-served-by': 'cache-fra1223-FRA',
+665 silly get     'x-cache': 'HIT',
+665 silly get     'x-cache-hits': '2',
+665 silly get     'x-timer': 'S1444732496.228250,VS0,VE0',
+665 silly get     vary: 'Accept' } ]
+666 verbose get saving bindings to /home/timetoburnfire/.npm/registry.npmjs.org/bindings/.cache.json
+667 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits/package.json
+668 info preinstall isarray@0.0.1
+669 info preinstall inherits@2.0.1
+670 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray/package.json
+671 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder/package.json
+672 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits/package.json
+673 info preinstall string_decoder@0.10.31
+674 silly mapToRegistry name bindings
+675 silly mapToRegistry using default registry
+676 silly mapToRegistry registry https://registry.npmjs.org/
+677 silly mapToRegistry uri https://registry.npmjs.org/bindings
+678 verbose addRemoteTarball https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz not in flight; adding
+679 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
+679 verbose addRemoteTarball   '14ad6113812d2d37d72e67b4cacb4bb726505f11' ]
+680 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray/package.json
+681 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder/package.json
+682 info retry fetch attempt 1 at 13:34:57
+683 info attempt registry request try #1 at 13:34:57
+684 http fetch GET https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz
+685 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits/package.json
+686 silly install resolved []
+687 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+688 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+689 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder/package.json
+690 http 200 https://registry.npmjs.org/nan
+691 silly get cb [ 200,
+691 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+691 silly get     etag: '"EEJEYBDBWDA07LWTXUI68JUWL"',
+691 silly get     'content-type': 'application/json',
+691 silly get     'cache-control': 'max-age=60',
+691 silly get     'content-length': '100017',
+691 silly get     'accept-ranges': 'bytes',
+691 silly get     date: 'Tue, 13 Oct 2015 10:34:56 GMT',
+691 silly get     via: '1.1 varnish',
+691 silly get     age: '54',
+691 silly get     connection: 'keep-alive',
+691 silly get     'x-served-by': 'cache-fra1229-FRA',
+691 silly get     'x-cache': 'HIT',
+691 silly get     'x-cache-hits': '7',
+691 silly get     'x-timer': 'S1444732496.224013,VS0,VE0',
+691 silly get     vary: 'Accept' } ]
+692 verbose get saving nan to /home/timetoburnfire/.npm/registry.npmjs.org/nan/.cache.json
+693 silly install resolved []
+694 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+695 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+696 info linkStuff isarray@0.0.1
+697 silly linkStuff isarray@0.0.1 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules as its parent node_modules
+698 silly install resolved []
+699 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+700 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+701 info linkStuff inherits@2.0.1
+702 silly linkStuff inherits@2.0.1 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules as its parent node_modules
+703 silly addNameRange number 2 { name: 'nan', range: '>=2.0.4 <3.0.0', hasData: true }
+704 silly addNameRange versions [ 'nan',
+704 silly addNameRange   [ '0.3.0-wip',
+704 silly addNameRange     '0.3.0-wip2',
+704 silly addNameRange     '0.3.0',
+704 silly addNameRange     '0.3.1',
+704 silly addNameRange     '0.3.2',
+704 silly addNameRange     '0.4.0',
+704 silly addNameRange     '0.4.1',
+704 silly addNameRange     '0.4.2',
+704 silly addNameRange     '0.4.3',
+704 silly addNameRange     '0.4.4',
+704 silly addNameRange     '0.5.0',
+704 silly addNameRange     '0.5.1',
+704 silly addNameRange     '0.5.2',
+704 silly addNameRange     '0.6.0',
+704 silly addNameRange     '0.7.0',
+704 silly addNameRange     '0.7.1',
+704 silly addNameRange     '0.8.0',
+704 silly addNameRange     '1.0.0',
+704 silly addNameRange     '1.1.0',
+704 silly addNameRange     '1.1.1',
+704 silly addNameRange     '1.1.2',
+704 silly addNameRange     '1.2.0',
+704 silly addNameRange     '1.3.0',
+704 silly addNameRange     '1.4.0',
+704 silly addNameRange     '1.4.1',
+704 silly addNameRange     '1.5.0',
+704 silly addNameRange     '1.4.2',
+704 silly addNameRange     '1.4.3',
+704 silly addNameRange     '1.5.1',
+704 silly addNameRange     '1.5.2',
+704 silly addNameRange     '1.6.0',
+704 silly addNameRange     '1.5.3',
+704 silly addNameRange     '1.6.1',
+704 silly addNameRange     '1.6.2',
+704 silly addNameRange     '1.7.0',
+704 silly addNameRange     '1.8.0',
+704 silly addNameRange     '1.8.1',
+704 silly addNameRange     '1.8.2',
+704 silly addNameRange     '1.8.3',
+704 silly addNameRange     '1.8.4',
+704 silly addNameRange     '1.9.0',
+704 silly addNameRange     '2.0.0',
+704 silly addNameRange     '2.0.1',
+704 silly addNameRange     '2.0.2',
+704 silly addNameRange     '2.0.3',
+704 silly addNameRange     '2.0.4',
+704 silly addNameRange     '2.0.5',
+704 silly addNameRange     '2.0.6',
+704 silly addNameRange     '2.0.7',
+704 silly addNameRange     '2.0.8',
+704 silly addNameRange     '2.0.9',
+704 silly addNameRange     '2.1.0' ] ]
+705 silly addNamed nan@2.1.0
+706 verbose addNamed "2.1.0" is a plain semver version for nan
+707 info linkStuff string_decoder@0.10.31
+708 silly linkStuff string_decoder@0.10.31 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules as its parent node_modules
+709 silly mapToRegistry name nan
+710 silly mapToRegistry using default registry
+711 silly mapToRegistry registry https://registry.npmjs.org/
+712 silly mapToRegistry uri https://registry.npmjs.org/nan
+713 verbose addRemoteTarball https://registry.npmjs.org/nan/-/nan-2.1.0.tgz not in flight; adding
+714 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-2.1.0.tgz',
+714 verbose addRemoteTarball   '020a7ccedc63fdee85f85967d5607849e74abbe8' ]
+715 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is/package.json
+716 info retry fetch attempt 1 at 13:34:57
+717 info attempt registry request try #1 at 13:34:57
+718 http fetch GET https://registry.npmjs.org/nan/-/nan-2.1.0.tgz
+719 verbose linkBins isarray@0.0.1
+720 verbose linkMans isarray@0.0.1
+721 verbose rebuildBundles isarray@0.0.1
+722 info preinstall core-util-is@1.0.1
+723 info install isarray@0.0.1
+724 verbose linkBins inherits@2.0.1
+725 verbose linkMans inherits@2.0.1
+726 verbose rebuildBundles inherits@2.0.1
+727 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is/package.json
+728 info install inherits@2.0.1
+729 info postinstall isarray@0.0.1
+730 info postinstall inherits@2.0.1
+731 verbose unlock done using /home/timetoburnfire/.npm/_locks/isarray-1c03d45c967acbbc.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/isarray
+732 verbose linkBins string_decoder@0.10.31
+733 verbose linkMans string_decoder@0.10.31
+734 verbose rebuildBundles string_decoder@0.10.31
+735 info install string_decoder@0.10.31
+736 verbose unlock done using /home/timetoburnfire/.npm/_locks/inherits-b821ea2a99773736.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/inherits
+737 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is/package.json
+738 info postinstall string_decoder@0.10.31
+739 verbose unlock done using /home/timetoburnfire/.npm/_locks/string-decoder-55b63874965d45f7.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/string_decoder
+740 silly install resolved []
+741 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+742 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+743 info linkStuff core-util-is@1.0.1
+744 silly linkStuff core-util-is@1.0.1 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules as its parent node_modules
+745 verbose linkBins core-util-is@1.0.1
+746 verbose linkMans core-util-is@1.0.1
+747 verbose rebuildBundles core-util-is@1.0.1
+748 info install core-util-is@1.0.1
+749 info postinstall core-util-is@1.0.1
+750 verbose unlock done using /home/timetoburnfire/.npm/_locks/core-util-is-8bf6995c49267360.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream/node_modules/core-util-is
+751 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+752 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+753 info linkStuff readable-stream@1.0.31
+754 silly linkStuff readable-stream@1.0.31 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules as its parent node_modules
+755 verbose linkBins readable-stream@1.0.31
+756 verbose linkMans readable-stream@1.0.31
+757 verbose rebuildBundles readable-stream@1.0.31
+758 verbose rebuildBundles [ 'core-util-is', 'inherits', 'isarray', 'string_decoder' ]
+759 info install readable-stream@1.0.31
+760 info postinstall readable-stream@1.0.31
+761 verbose unlock done using /home/timetoburnfire/.npm/_locks/readable-stream-b12ab0882e19a60d.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/readable-stream
+762 http fetch 200 https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz
+763 silly fetchAndShaCheck shasum 14ad6113812d2d37d72e67b4cacb4bb726505f11
+764 verbose addTmpTarball /tmp/npm-12308-a00fb20e/registry.npmjs.org/bindings/-/bindings-1.2.1.tgz not in flight; adding
+765 verbose addTmpTarball already have metadata; skipping unpack for bindings@1.2.1
+766 silly cache afterAdd bindings@1.2.1
+767 verbose afterAdd /home/timetoburnfire/.npm/bindings/1.2.1/package/package.json not in flight; writing
+768 verbose afterAdd /home/timetoburnfire/.npm/bindings/1.2.1/package/package.json written
+769 http fetch 200 https://registry.npmjs.org/nan/-/nan-2.1.0.tgz
+770 silly fetchAndShaCheck shasum 020a7ccedc63fdee85f85967d5607849e74abbe8
+771 verbose addTmpTarball /tmp/npm-12308-a00fb20e/registry.npmjs.org/nan/-/nan-2.1.0.tgz not in flight; adding
+772 verbose addTmpTarball already have metadata; skipping unpack for nan@2.1.0
+773 silly cache afterAdd nan@2.1.0
+774 verbose afterAdd /home/timetoburnfire/.npm/nan/2.1.0/package/package.json not in flight; writing
+775 verbose afterAdd /home/timetoburnfire/.npm/nan/2.1.0/package/package.json written
+776 silly install resolved [ { name: 'bindings',
+776 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+776 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+776 silly install resolved     version: '1.2.1',
+776 silly install resolved     author:
+776 silly install resolved      { name: 'Nathan Rajlich',
+776 silly install resolved        email: 'nathan@tootallnate.net',
+776 silly install resolved        url: 'http://tootallnate.net' },
+776 silly install resolved     repository:
+776 silly install resolved      { type: 'git',
+776 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+776 silly install resolved     main: './bindings.js',
+776 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+776 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+776 silly install resolved     license: 'MIT',
+776 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
+776 silly install resolved     _id: 'bindings@1.2.1',
+776 silly install resolved     scripts: {},
+776 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+776 silly install resolved     _from: 'bindings@1.2.1',
+776 silly install resolved     _npmVersion: '1.4.14',
+776 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+776 silly install resolved     maintainers: [ [Object], [Object] ],
+776 silly install resolved     dist:
+776 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+776 silly install resolved        tarball: 'http://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+776 silly install resolved     directories: {},
+776 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+776 silly install resolved   { name: 'nan',
+776 silly install resolved     version: '2.1.0',
+776 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+776 silly install resolved     main: 'include_dirs.js',
+776 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+776 silly install resolved     scripts:
+776 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+776 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+776 silly install resolved        docs: 'doc/.build.sh' },
+776 silly install resolved     contributors:
+776 silly install resolved      [ [Object],
+776 silly install resolved        [Object],
+776 silly install resolved        [Object],
+776 silly install resolved        [Object],
+776 silly install resolved        [Object],
+776 silly install resolved        [Object],
+776 silly install resolved        [Object] ],
+776 silly install resolved     devDependencies:
+776 silly install resolved      { bindings: '~1.2.1',
+776 silly install resolved        commander: '^2.8.1',
+776 silly install resolved        glob: '^5.0.14',
+776 silly install resolved        'node-gyp': '~3.0.1',
+776 silly install resolved        tap: '~0.7.1',
+776 silly install resolved        xtend: '~4.0.0' },
+776 silly install resolved     license: 'MIT',
+776 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+776 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+776 silly install resolved     _id: 'nan@2.1.0',
+776 silly install resolved     _shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+776 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.1.0.tgz',
+776 silly install resolved     _from: 'nan@>=2.0.4 <3.0.0',
+776 silly install resolved     _npmVersion: '3.3.5',
+776 silly install resolved     _nodeVersion: '4.1.2',
+776 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+776 silly install resolved     dist:
+776 silly install resolved      { shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+776 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-2.1.0.tgz' },
+776 silly install resolved     maintainers: [ [Object], [Object] ],
+776 silly install resolved     directories: {} } ]
+777 info install bindings@1.2.1 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+778 info install nan@2.1.0 into /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+779 info installOne bindings@1.2.1
+780 verbose installOne of bindings to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq not in flight; installing
+781 info installOne nan@2.1.0
+782 verbose installOne of nan to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq not in flight; installing
+783 verbose lock using /home/timetoburnfire/.npm/_locks/bindings-038ddac2f794e2a9.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+784 silly install write writing bindings 1.2.1 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+785 verbose lock using /home/timetoburnfire/.npm/_locks/nan-efd6db3f23ae9a8b.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+786 silly install write writing nan 2.1.0 to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+787 verbose unbuild node_modules/pg-native/node_modules/libpq/node_modules/bindings
+788 verbose unbuild node_modules/pg-native/node_modules/libpq/node_modules/nan
+789 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+790 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+791 verbose tar unpack /home/timetoburnfire/.npm/bindings/1.2.1/package.tgz
+792 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+793 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings is being purged
+794 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+795 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+796 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+797 silly gunzTarPerm modes [ '775', '664' ]
+798 verbose tar unpack /home/timetoburnfire/.npm/nan/2.1.0/package.tgz
+799 verbose tar unpacking to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+800 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan is being purged
+801 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+802 silly gunzTarPerm modes [ '775', '664' ]
+803 silly gunzTarPerm extractEntry package.json
+804 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+805 silly gunzTarPerm extractEntry package.json
+806 silly gunzTarPerm extractEntry README.md
+807 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+808 silly gunzTarPerm extractEntry bindings.js
+809 silly gunzTarPerm modified mode [ 'bindings.js', 420, 436 ]
+810 silly gunzTarPerm extractEntry README.md
+811 silly gunzTarPerm extractEntry include_dirs.js
+812 silly gunzTarPerm extractEntry nan_converters.h
+813 silly gunzTarPerm extractEntry LICENSE.md
+814 silly gunzTarPerm extractEntry .dntrc
+815 silly gunzTarPerm extractEntry appveyor.yml
+816 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings/package.json
+817 info preinstall bindings@1.2.1
+818 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings/package.json
+819 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings/package.json
+820 silly gunzTarPerm extractEntry doc/new.md
+821 silly gunzTarPerm extractEntry doc/.build.sh
+822 silly gunzTarPerm extractEntry doc/buffers.md
+823 silly gunzTarPerm extractEntry doc/callback.md
+824 silly install resolved []
+825 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+826 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+827 info linkStuff bindings@1.2.1
+828 silly linkStuff bindings@1.2.1 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules as its parent node_modules
+829 silly gunzTarPerm extractEntry doc/converters.md
+830 silly gunzTarPerm extractEntry doc/errors.md
+831 silly gunzTarPerm extractEntry doc/maybe_types.md
+832 silly gunzTarPerm extractEntry doc/methods.md
+833 verbose linkBins bindings@1.2.1
+834 verbose linkMans bindings@1.2.1
+835 verbose rebuildBundles bindings@1.2.1
+836 info install bindings@1.2.1
+837 info postinstall bindings@1.2.1
+838 verbose unlock done using /home/timetoburnfire/.npm/_locks/bindings-038ddac2f794e2a9.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/bindings
+839 silly gunzTarPerm extractEntry doc/asyncworker.md
+840 silly gunzTarPerm extractEntry doc/node_misc.md
+841 silly gunzTarPerm extractEntry doc/persistent.md
+842 silly gunzTarPerm extractEntry doc/scopes.md
+843 silly gunzTarPerm extractEntry doc/script.md
+844 silly gunzTarPerm extractEntry doc/string_bytes.md
+845 silly gunzTarPerm extractEntry doc/v8_internals.md
+846 silly gunzTarPerm extractEntry doc/v8_misc.md
+847 silly gunzTarPerm extractEntry nan.h
+848 silly gunzTarPerm extractEntry nan_callbacks.h
+849 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+850 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+851 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+852 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+853 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+854 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+855 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+856 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+857 silly gunzTarPerm extractEntry nan_new.h
+858 silly gunzTarPerm extractEntry nan_object_wrap.h
+859 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+860 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+861 silly gunzTarPerm extractEntry nan_string_bytes.h
+862 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+863 silly gunzTarPerm extractEntry nan_weak.h
+864 silly gunzTarPerm extractEntry CHANGELOG.md
+865 silly gunzTarPerm extractEntry tools/package.json
+866 silly gunzTarPerm extractEntry tools/README.md
+867 silly gunzTarPerm extractEntry tools/1to2.js
+868 verbose write writing to /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan/package.json
+869 info preinstall nan@2.1.0
+870 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan/package.json
+871 verbose readDependencies loading dependencies from /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan/package.json
+872 silly install resolved []
+873 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+874 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+875 info linkStuff nan@2.1.0
+876 silly linkStuff nan@2.1.0 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules as its parent node_modules
+877 verbose linkBins nan@2.1.0
+878 verbose linkMans nan@2.1.0
+879 verbose rebuildBundles nan@2.1.0
+880 info install nan@2.1.0
+881 info postinstall nan@2.1.0
+882 verbose unlock done using /home/timetoburnfire/.npm/_locks/nan-efd6db3f23ae9a8b.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq/node_modules/nan
+883 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+884 info build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+885 info linkStuff libpq@1.7.0
+886 silly linkStuff libpq@1.7.0 has /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules as its parent node_modules
+887 verbose linkBins libpq@1.7.0
+888 verbose linkMans libpq@1.7.0
+889 verbose rebuildBundles libpq@1.7.0
+890 verbose rebuildBundles [ 'bindings', 'nan' ]
+891 info install libpq@1.7.0
+892 verbose unsafe-perm in lifecycle true
+893 info libpq@1.7.0 Failed to exec install script
+894 verbose unlock done using /home/timetoburnfire/.npm/_locks/libpq-7c0539bb6d53df34.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+895 verbose about to build /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+896 verbose unlock done using /home/timetoburnfire/.npm/_locks/pg-native-ccf730fbacf427e3.lock for /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+897 verbose stack Error: libpq@1.7.0 install: `node-gyp rebuild`
+897 verbose stack Exit status 1
+897 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+897 verbose stack     at EventEmitter.emit (events.js:110:17)
+897 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+897 verbose stack     at ChildProcess.emit (events.js:110:17)
+897 verbose stack     at maybeClose (child_process.js:1015:16)
+897 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+898 verbose pkgid libpq@1.7.0
+899 verbose cwd /home/timetoburnfire/Desktop/krystine-agency
+900 error Linux 3.19.0-30-generic
+901 error argv "/usr/bin/node" "/usr/bin/npm" "i" "pg-native" "-S"
+902 error node v0.12.7
+903 error npm  v2.11.3
+904 error code ELIFECYCLE
+905 error libpq@1.7.0 install: `node-gyp rebuild`
+905 error Exit status 1
+906 error Failed at the libpq@1.7.0 install script 'node-gyp rebuild'.
+906 error This is most likely a problem with the libpq package,
+906 error not with npm itself.
+906 error Tell the author that this fails on your system:
+906 error     node-gyp rebuild
+906 error You can get their info via:
+906 error     npm owner ls libpq
+906 error There is likely additional logging output above.
+907 verbose exit [ 1, true ]
+908 verbose unbuild node_modules/pg-native/node_modules/libpq
+909 info preuninstall libpq@1.7.0
+910 info uninstall libpq@1.7.0
+911 verbose unbuild rmStuff libpq@1.7.0 from /home/timetoburnfire/Desktop/krystine-agency/node_modules
+912 verbose unbuild rmStuff in /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules
+913 info postuninstall libpq@1.7.0
+914 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+915 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+916 silly vacuum-fs purging /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules/libpq
+917 silly vacuum-fs quitting because other entries in /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native/node_modules
+918 verbose unbuild node_modules/pg-native
+919 info preuninstall pg-native@1.9.0
+920 info uninstall pg-native@1.9.0
+921 verbose unbuild rmStuff pg-native@1.9.0 from /home/timetoburnfire/Desktop/krystine-agency/node_modules
+922 info postuninstall pg-native@1.9.0
+923 silly gentlyRm /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native is being purged from base /home/timetoburnfire/Desktop/krystine-agency
+924 verbose gentlyRm don't care about contents; nuking /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+925 silly vacuum-fs purging /home/timetoburnfire/Desktop/krystine-agency/node_modules/pg-native
+926 silly vacuum-fs quitting because other entries in /home/timetoburnfire/Desktop/krystine-agency/node_modules

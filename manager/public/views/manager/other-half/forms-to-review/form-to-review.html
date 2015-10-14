@@ -1,0 +1,34 @@
+<header class="accordion-navigation-header clearfix">
+  <span id="toggle-activator" class="accordion-navigation-header-title">
+    <%= firstName %> <%= lastName %>
+  </span>
+  <ul class="button-group round right">
+    <li>
+      <button id="delete-button" class="button alert tiny no-margin-bottom">Deny</button>
+    </li>
+    <li>
+      <a href="#" class="button success tiny no-margin-bottom">Accept</a>
+    </li>
+  </ul>
+</header>
+<div class="content clearfix">
+  <ul class="pricing-table no-margin-bottom">
+    <li class="title"><%= email %></li>
+    <li class="price"><%= phone %></li>
+    <li class="description"><%= new Date(createdAt).toGMTString() %></li>
+    <li class="bullet-item">
+      <%= mainPhotoUrl %>
+      <img src="<%= mainPhotoUrl %>">
+    </li>
+    <li class="bullet-item"><%= gender %></li>
+    <li class="bullet-item"><%= new Date(birthday).toDateString() %></li>
+    <li class="bullet-item"><%= height %></li>
+    <li class="bullet-item"><%= weight %></li>
+    <li class="bullet-item"><%= eyeСolor %></li>
+    <li class="bullet-item"><%= badHabits %></li>
+    <li class="bullet-item"><%= aboutMe %></li>
+    <li class="cta-button">
+      <a class="button success" href="#">Accept</a>
+    </li>
+  </ul>
+</div>

@@ -17,6 +17,7 @@
   width: 680px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 #registration-popup #form-box-wrap #form-box {
@@ -28,6 +29,33 @@
   width: 600px;
   padding: 40px;
   position: relative;
+}
+
+#registration-popup #form-box-wrap #send-form-screen {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#registration-popup #form-box-wrap #send-form-screen .message-popup {
+  position: absolute;
+  bottom: 115px;
+  background-color: #fff;
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#message-popup-complete {
+  display: none;
 }
 
 #registration-popup #form-box-wrap #form-box #poppup-closer {
@@ -61,6 +89,13 @@
   line-height: 1.2em;
   color: #333;
   font-weight: 400;
+}
+
+#registration-popup #form-box-wrap #form-box #main-photo-image {
+  /*max-width: 150px;*/
+  /*max-height: 150px;*/
+  display: block;
+  height: 150px;
 }
 
 fieldset {
@@ -105,6 +140,18 @@ label.tab-30 {
   width: 28.4%;
 }
 
+label.tab-35 {
+  width: 33.4%;
+}
+
+label.tab-40 {
+  width: 38.4%;
+}
+
+label.tab-45 {
+  width: 43.4%;
+}
+
 label.tab-50 {
   width: 48.5%;
 }
@@ -137,8 +184,8 @@ label input.tab-50 {
   width: 50%;
 }
 
-input {
-  padding: 12px;
+input[type="text"],
+input[type="number"] {
   border: 1px solid #ccc;
   background: #fafafa;
   box-sizing: border-box;
@@ -146,7 +193,15 @@ input {
   margin: 6px 0px 4px;
   font-size: 15px;
   height: 42px;
+  overflow: hidden;
   transition: background 0.1s ease-in-out;
+}
+
+input[type="text"] {
+  padding: 12px;
+}
+input[type="number"] {
+  padding: 0px 0px 0px 12px;
 }
 
 select {

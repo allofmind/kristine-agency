@@ -1,0 +1,8 @@
+{
+  "401": {
+    "0": "User is not defined."
+  },
+  "409": {
+    "0": "Some server error, notify developer."
+  }
+}

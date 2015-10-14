@@ -21,7 +21,7 @@ requirejs.config({
   waitSeconds: 50
 });
 
-require([ "libraries/backbone-min"  ], function () {
+require([ "libraries/backbone-min" ], function () {
 
   $(function () {
 
