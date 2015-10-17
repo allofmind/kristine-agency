@@ -52,6 +52,6 @@ process.on("uncaughtException", function(mainError) {
   io.write(mainErrorMessage, "red");
 });
 
-app.listen(app.get("port"), function() {
+app.listen(process.env.PORT || app.get("port"), function() {
   console.log("Node app is running on port", app.get("port"));
 });
