@@ -87,3 +87,16 @@ main {
 #forms-to-review-item.active .content {
   display: block;
 }
+
+#forms-to-review-item .label {
+  top: -2px;
+  margin-left: 3px;
+}
+
+#forms-to-review-item #main-photo {
+  height: 150px;
+}
+
+button {
+  outline: none;
+}

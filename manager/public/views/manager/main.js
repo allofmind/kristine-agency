@@ -1,5 +1,5 @@
 define([
-  "text!views/manager/main.html",
+  "text!./main.html",
   "global/user"
 ], function(
   template,

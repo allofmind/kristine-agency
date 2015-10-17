@@ -1,0 +1,93 @@
+<header class="accordion-navigation-header clearfix">
+  <h6><%= new Date(createdAt).toGMTString() %></h6>
+  <span id="toggle-activator" class="accordion-navigation-header-title">
+    <%= firstName %> <%= lastName %> 
+  </span>
+  <% if (accepted === 0) { %>
+    <span class="label radius">New</span>
+  <% } %>
+  <% if (accepted === 1) { %>
+    <span class="label secondary radius">Denied</span>
+  <% } %>
+  <% if (accepted === 2) { %>
+    <span class="label success radius">Accepted</span>
+  <% } %>
+  <ul class="button-group round right">
+    <li>
+      <button id="delete-button" class="button alert tiny no-margin-bottom">Delete</button>
+    </li>
+    <% if (accepted !== 1) { %>
+      <li>
+        <button id="deny-button" class="button secondary tiny no-margin-bottom">Deny</button>
+      </li>
+    <% } %>
+    <% if (accepted !== 2) { %>
+      <li>
+        <button id="accept-button" class="button success tiny no-margin-bottom">Accept</button>
+      </li>
+    <% } %>
+  </ul>
+</header>
+<div class="content clearfix">
+  <ul class="pricing-table no-margin-bottom">
+    <li class="title">Email: <%= email %></li>
+    <li class="price">Phone: <%= phone %></li>
+    <li class="bullet-item">
+      <img id="main-photo" src="<%= mainPhotoUrl %>">
+    </li>
+    <li class="bullet-item">Gender:
+      <% switch (gender) { case 1: %>
+          Man
+        <% break; case 2: %>
+          Woman
+        <% break; } %>
+    </li>
+    <li class="bullet-item">Age: <%= (new Date(Date.now() - new Date(birthday).getTime())).getUTCFullYear() - 1970 %> year
+    </li>
+    <% if (height) { %>
+      <li class="bullet-item">Height: <%= height %> cm</li>
+    <% } %>
+    <% if (weight) { %>
+      <li class="bullet-item">Weight: <%= weight %> kg</li>
+    <% } %>
+    <% if (eyeСolor) { %>
+      <li class="bullet-item">Eye color:
+        <% switch (eyeСolor) { case 1: %>
+            Brown
+          <% break; case 2: %>
+            Green
+          <% break; case 3: %>
+            Gray
+          <% break; case 4: %>
+            Blue
+          <% break; case 5: %>
+            Other
+          <% break; } %>
+      </li>
+    <% } %>
+    <% if (smoke) { %>
+      <li class="bullet-item">Smoke:
+        <% switch (smoke) { case 1: %>
+            Yes
+          <% break; case 2: %>
+            Sometimes
+          <% break; case 3: %>
+            Not
+          <% break; } %>
+      </li>
+    <% } %>
+    <% if (aboutMe) { %>
+      <li class="bullet-item">About: <%= aboutMe %></li>
+    <% } %>
+    <% if (accepted === 2) { %>
+      <li class="cta-button">
+        <button id="deny-button" class="button secondary">Deny</button>
+      </li>
+    <% } %>
+    <% if (accepted === 0 || accepted === 1) { %>
+      <li class="cta-button">
+        <button id="accept-button" class="button success">Accept</button>
+      </li>
+    <% } %>
+  </ul>
+</div>

@@ -1,5 +1,5 @@
 define([
-  "text!views/login/main.html",
+  "text!./main.html",
   "global/user",
   "common/messager"
 ], function(

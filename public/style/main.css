@@ -87,7 +87,7 @@ br.hard {
 }
 
 
-.clearfix:before {
+.clearfix:after {
   content: "";
   clear: both;
   display: block;
@@ -178,6 +178,6 @@ br.hard {
 
 #main-article {
   background-color: #fff;
-  padding: 8% 8%;
+  padding: 80px;
   box-sizing: border-box;
 }

@@ -10,6 +10,7 @@ define([
     events: {
     },
     initialize: function() {
+      $("#main-left-bar a").removeClass("active");
       this.$el.append(template);
       $("#manager-content").html(this.$el);
     }

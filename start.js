@@ -28,13 +28,13 @@ var loginApi = login.api;
 app.set("port", 5000);
 
 app.use(serveFavicon(__dirname + "/favicon.ico"));
-app.use(express.static(__dirname + "/public"));
-app.use(express.static(__dirname + "/manager/public"));
+app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "/manager/public")));
+app.use("/files/photos", express.static(__dirname + "/files/photos"));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
 app.get("/manager", function (req, res) {
-  // path.join("files/photos/users/", part.filename);
   fs.createReadStream("manager/public/index.html").pipe(res);
 });
 

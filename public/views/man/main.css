@@ -1,0 +1,52 @@
+.forms-profile-container {
+
+}
+
+.forms-profile-container .form-profile {
+  border-top: 1px solid #b5b5b5;
+  /*border-bottom: 3px solid #b5b5b5;*/
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.forms-profile-container .form-profile:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.forms-profile-container .form-profile .form-profile-gallery {
+  float: left;
+  width: 300px;
+}
+
+.forms-profile-container .form-profile .form-profile-gallery .main-photo-container {
+  width: 300px;
+  height: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+/*  border-color: #b5b5b5;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-right-width: 0;*/
+}
+
+.forms-profile-container .form-profile .form-profile-gallery .main-photo-container img {
+  height: 300px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.forms-profile-container .form-profile .form-profile-info {
+  float: left;
+  padding: 15px;
+  margin-left: 15px;
+  width: calc(800px - 315px);
+  box-sizing: border-box;
+}
+
+.forms-profile-container .form-profile .form-profile-info h1 {
+  font-size: 20px;
+}

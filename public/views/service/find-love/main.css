@@ -14,7 +14,7 @@
 #registration-popup #form-box-wrap {
   display: table;
   height: 100%;
-  width: 680px;
+  width: 650px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -26,7 +26,6 @@
   background-color: #fff;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
   padding: 40px;
   position: relative;
 }
@@ -185,9 +184,10 @@ label input.tab-50 {
 }
 
 input[type="text"],
+input[type="email"],
 input[type="number"] {
   border: 1px solid #ccc;
-  background: #fafafa;
+  background-color: #fafafa;
   box-sizing: border-box;
   border-radius: 2px;
   margin: 6px 0px 4px;
@@ -197,7 +197,8 @@ input[type="number"] {
   transition: background 0.1s ease-in-out;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   padding: 12px;
 }
 input[type="number"] {
@@ -207,7 +208,7 @@ input[type="number"] {
 select {
   padding: 0px 12px;
   border: 1px solid #ccc;
-  background: #fafafa;
+  background-color: #fafafa;
   box-sizing: border-box;
   border-radius: 2px;
   margin: 6px 0px 4px;
@@ -218,7 +219,7 @@ select {
 textarea {
   padding: 12px;
   border: 1px solid #ccc;
-  background: #fafafa;
+  background-color: #fafafa;
   box-sizing: border-box;
   border-radius: 2px;
   margin: 6px 0px 4px;
@@ -226,8 +227,18 @@ textarea {
   height: 140px;
 }
 
-input:focus {
+input:focus,
+select:focus,
+textarea:focus {
   background: #fff;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: #fafafa !important;
+  background-image: none !important;
+  color: inherit !important;
 }
 
 label #title {

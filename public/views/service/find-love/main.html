@@ -38,12 +38,12 @@
       <fieldset class="double">
         <legend>Представьтесь, пожалуйста:</legend>
         <label class="tab-50">
-          <input name="firstName" type="text" value="Влад" required>
+          <input name="firstName" type="text" required value="Оксана">
           <br>
           <span id="title">Имя *</span>
         </label>
         <label class="tab-50">
-          <input name="lastName" type="text" value="Ткаченко" required>
+          <input name="lastName" type="text" required value="Иванчук">
           <br>
           <span id="title">Фамилия *</span>
         </label>
@@ -54,8 +54,8 @@
         <label class="tab-25">
           <select name="gender" required>
             <option value=""></option>
-            <option value="Мужской" selected>Мужской</option>
-            <option value="Женский">Женский</option>
+            <option value="1">Мужской</option>
+            <option value="2" selected>Женский</option>
           </select>
           <br>
           <span id="title">Пол *</span>
@@ -65,12 +65,12 @@
       <fieldset class="multi">
         <legend>Для связи с Вами:</legend>
         <label class="tab-50">
-          <input name="email" type="text" value="timetoburnfire@gmail.com" required>
+          <input name="email" type="email" required autocomplete="off">
           <br>
           <span id="title">Почтовый адрес *</span>
         </label>
         <label class="tab-35">
-          <input name="phone" type="text" value="80936124991" required>
+          <input name="phone" type="text" required>
           <br>
           <span id="title">Телефон *</span>
         </label>
@@ -79,7 +79,7 @@
       <fieldset class="multi">
         <legend>Дата рождения:</legend>
         <label class="tab-15">
-          <select name="day">
+          <select name="day" required>
             <option value=""></option>
             <option value="01">01</option>
             <option value="02">02</option>
@@ -114,10 +114,10 @@
             <option value="31">31</option>
           </select>
           <br>
-          <span id="title">День</span>
+          <span id="title">День *</span>
         </label>
         <label class="tab-25">
-          <select name="month">
+          <select name="month" required>
             <option value=""></option>
             <option value="01">Январь</option>
             <option value="02">Февраль</option>
@@ -133,10 +133,10 @@
             <option value="12">Декабрь</option>
           </select>
           <br>
-          <span id="title">Месяц</span>
+          <span id="title">Месяц *</span>
         </label>
         <label class="tab-20">
-          <select name="year">
+          <select name="year" required>
             <option value=""></option>
             <option value="1999">1999</option>
             <option value="1998">1998</option>
@@ -190,30 +190,30 @@
             <option value="1950">1950</option>
           </select>
           <br>
-          <span id="title">Год</span>
+          <span id="title">Год *</span>
         </label>
       </fieldset>
       <br class="lite">
       <fieldset class="multi">
         <legend>Типаж:</legend>
         <label class="tab-15">
-          <input name="height" type="number" min="130" max="260" maxlength="3" value="188">
+          <input name="height" type="number" min="130" max="260" maxlength="3" value="165">
           <br>
           <span id="title">Рост, см</span>
         </label>
         <label class="tab-15">
-          <input name="weight" type="number" min="35" max="150" maxlength="3" value="66">
+          <input name="weight" type="number" min="35" max="150" maxlength="3" value="50">
           <br>
           <span id="title">Вес, кг</span>
         </label>
         <label class="tab-30">
           <select name="eyeСolor">
-            <option></option>
-            <option value="Карие">Карие</option>
-            <option value="Зеленые" selected>Зеленые</option>
-            <option value="Серые">Серые</option>
-            <option value="Синие">Синие</option>
-            <option value="Другой">Другой</option>
+            <option value=""></option>
+            <option value="1" selected>Карие</option>
+            <option value="2">Зеленые</option>
+            <option value="3">Серые</option>
+            <option value="4">Синие</option>
+            <option value="5">Другой</option>
           </select>
           <br>
           <span id="title">Цвет глаз</span>
@@ -223,11 +223,11 @@
       <fieldset class="multi">
         <legend>Вредные привычки:</legend>
         <label class="tab-25">
-          <select name="badHabits">
-            <option></option>
-            <option>Да</option>
-            <option>Иногда</option>
-            <option selected>Нет</option>
+          <select name="smoke">
+            <option value=""></option>
+            <option value="1">Да</option>
+            <option value="2" selected>Иногда</option>
+            <option value="3">Нет</option>
           </select>
           <br>
           <span id="title">Курение</span>
@@ -251,7 +251,7 @@
       <fieldset class="multi">
         <legend>Расскажите о себе:</legend>
         <label class="tab-100">
-          <textarea name="aboutMe">Я люблю жизнь.</textarea>
+          <textarea name="aboutMe" maxlength="500">Привет привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет  привет </textarea>
         </label>
       </fieldset>
       <br class="lite">

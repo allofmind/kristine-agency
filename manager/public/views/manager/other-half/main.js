@@ -1,5 +1,5 @@
 define([
-  "text!views/manager/other-half/main.html"
+  "text!./main.html"
 ], function(
   template
 ) {
@@ -9,6 +9,8 @@ define([
     events: {
     },
     initialize: function() {
+      $("#main-left-bar a").removeClass("active");
+      $("#main-left-bar a[href=\"#/other-half\"]").addClass("active");
       this.$el.append(template);
       $("#manager-content").html(this.$el);
     }

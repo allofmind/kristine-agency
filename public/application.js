@@ -79,44 +79,48 @@ require([ "libraries/backbone-min" ], function () {
         }
       },
       "about": function (params) {
-        var router = this;
-        if (router.activeViewLvl1Name !== "about") {
-          mainHeaderView.setDeactive();
-          router.activeViewLvl1Name = "about";
-          require([ "views/about/main" ], function (AboutView) {
-            if (router.activeViewLvl1) {
-              var prevActive = router.activeViewLvl1;
-              TweenMax.to(prevActive.$el, 0.6, {
-                opacity: 0,
-                onComplete: function () { prevActive.remove(); }
-              });
-            }
-            var aboutView = new AboutView();
-            router.activeViewLvl1 = aboutView;
-            TweenMax.fromTo(aboutView.$el, 0.6, { opacity: 0 }, {
-              opacity: 1
-            });
-            $("#main-section").append(aboutView.$el);
-          });
-        }
+        this.mainLoader({
+          viewName: "about",
+          viewPath: "views/about/main"
+        });
       },
-      "service": "service",
+      "service": function () {
+        this.mainLoader({
+          viewName: "service",
+          viewPath: "views/service/main"
+        });
+      },
       "service/find-love": function (params) {
         var router = this;
-        router.service(params, function () {
+        this.mainLoader({
+          viewName: "service",
+          viewPath: "views/service/main"
+        }, function () {
           require([ "views/service/find-love/main" ], function (FindLove) {
             var findLove = router.findLove = new FindLove();
             $("body").append(findLove.$el);
           });
         });
+      },
+      "woman": function (params) {
+        this.mainLoader({
+          viewName: "woman",
+          viewPath: "views/woman/main"
+        });
+      },
+      "man": function (params) {
+        this.mainLoader({
+          viewName: "man",
+          viewPath: "views/man/main"
+        });
       }
     },
-    "service": function (params, callback) {
+    "mainLoader": function (params, callback) {
       var router = this;
-      if (router.activeViewLvl1Name !== "service") {
+      if (router.activeViewLvl1Name !== params.viewName) {
         mainHeaderView.setDeactive();
-        router.activeViewLvl1Name = "service";
-        require([ "views/service/main" ], function (ServiceView) {
+        router.activeViewLvl1Name = params.viewName;
+        require([ params.viewPath ], function (module) {
           if (router.activeViewLvl1) {
             var prevActive = router.activeViewLvl1;
             TweenMax.set(prevActive.$el, { position: "absolute" });
@@ -125,12 +129,12 @@ require([ "libraries/backbone-min" ], function () {
               onComplete: function () { prevActive.remove(); }
             });
           }
-          var serviceView = new ServiceView();
-          router.activeViewLvl1 = serviceView;
-          TweenMax.fromTo(serviceView.$el, 0.6, { opacity: 0 }, {
+          var view = module();
+          router.activeViewLvl1 = view;
+          TweenMax.fromTo(view.$el, 0.6, { opacity: 0 }, {
             opacity: 1
           });
-          $("#main-section").append(serviceView.$el);
+          $("#main-section").append(view.$el);
           if (callback) callback();
         });
       }

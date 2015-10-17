@@ -53,9 +53,11 @@ require([
         var router = this;
         this.mainLoader(function () {
           if (router.activeLvl2ViewName !== "meet-page") {
-            router.activeLvl1V2ewName = "meet-page";
+            router.activeLvl2ViewName = "meet-page";
             require([ "views/manager/meet-page/main" ], function (MeetPage) {
-              new MeetPage();
+              if (router.activeLvl2ViewName = "meet-page") {
+                router.activeLvl2View = new MeetPage();
+              }
             });
           }
         });
@@ -65,24 +67,23 @@ require([
         if (router.activeLvl1ViewName !== "login") {
           router.activeLvl1ViewName = "login";
           require([ "views/login/main" ], function (Login) {
-            new Login();
+            if (router.activeLvl1ViewName === "login") {
+              router.activeLvl1View = new Login();
+            }
           });
         }
       },
       "other-half": function () {
-        this.navigate("#/other-half/forms-to-review");
+        this.navigate("#/other-half/new");
       },
-      "other-half/forms-to-review": function () {
-        var router = this;
-        this.otherHalfLoader(function () {
-          if (router.activeLvl1OtherHalfViewName !== "forms-to-review") {
-            router.activeLvl1OtherHalfViewName = "forms-to-review";
-            require([ "views/manager/other-half/forms-to-review/main" ], function (FormsToReview) {
-              var formsToReview = new FormsToReview();
-              // $("#main-left-bar a.item[href=\"#/other-half\"]").addClass("active");
-            });
-          }
-        });
+      "other-half/new": function () {
+        this.otherHalfFormList([ 0 ]);
+      },
+      "other-half/accepted": function () {
+        this.otherHalfFormList([ 2 ]);
+      },
+      "other-half/denied": function () {
+        this.otherHalfFormList([ 1 ]);
       },
       "*All": function () { }
     },
@@ -91,8 +92,10 @@ require([
       if (router.activeLvl1ViewName !== "manager") {
         router.activeLvl1ViewName = "manager";
         require([ "views/manager/main" ], function (Manager) {
-          new Manager();
-          if (callback) callback();
+          if (router.activeLvl1ViewName === "manager") {
+            router.activeLvl1View = new Manager();
+            if (callback) callback();
+          }
         });
       }
       else {
@@ -105,9 +108,10 @@ require([
         if (router.activeLvl2ViewName !== "other-half") {
           router.activeLvl2ViewName = "other-half";
           require([ "views/manager/other-half/main" ], function (OtherHalf) {
-            new OtherHalf();
-            $("#main-left-bar a.item[href=\"#/other-half\"]").addClass("active");
-            if (callback) callback();
+            if (router.activeLvl2ViewName === "other-half") {
+              router.activeLvl2View = new OtherHalf();
+              if (callback) callback();
+            }
           });
         }
         else {
@@ -115,8 +119,33 @@ require([
         }
       });
     },
+    "otherHalfFormList": function (filterValue) {
+      var router = this;
+      this.otherHalfLoader(function () {
+        if (router.activeLvl1OtherHalfViewName !== "other-half/review-forms") {
+          router.activeLvl1OtherHalfViewName = "other-half/review-forms";
+          require([ "views/manager/other-half/review-forms/main" ], function (FormsToReview) {
+            if (router.activeLvl1OtherHalfViewName === "other-half/review-forms") {
+              var formsToReview = router.activeLvl1OtherHalfView = new FormsToReview({ acceptedFilterValue: filterValue });
+            }
+          });
+        }
+        else {
+          router.activeLvl1OtherHalfView.update({ acceptedFilterValue: filterValue });
+        }
+      });
+    },
     execute: function (callback, args) {
       var router = this;
+      var hashLvl = location.hash.split("/").length;
+      if (hashLvl < 1) {
+        router.activeLvl2ViewName = "";
+        if (router.activeLvl2View) router.activeLvl2View.remove();
+      }
+      if (hashLvl < 2) {
+        router.activeLvl1OtherHalfViewName = "";
+        if (router.activeLvl1OtherHalfView) router.activeLvl1OtherHalfView.remove();
+      }
       if (Backbone.history.fragment !== "login" && !user.isLogin()) {
         router.navigate("#/login");
         return false;

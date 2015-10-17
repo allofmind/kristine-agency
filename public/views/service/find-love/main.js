@@ -1,22 +1,10 @@
 define([
-  "text!views/service/find-love/main.html",
-  "css!views/service/find-love/main"
+  "text!./main.html",
+  "css!./main"
 ], function(
   template,
   style
 ) {
-
-  // var DateView = Backbone.View.extend({
-  //   el: "#date-input",
-  //   events: {
-  //     "input": function (event) {
-  //       console.log(event);
-  //     }
-  //   },
-  //   initialize: function () {
-  //     console.log(this);
-  //   }
-  // });
 
   var MainPhotoView = Backbone.View.extend({
     events: {
@@ -54,18 +42,17 @@ define([
         });
         var form = event.target;
         var data = new FormData();
-        data.append("mainPhoto", form.mainPhoto.files[0]);
-        data.append("firstName", form.firstName.value);
+        data.append("mainPhotoUrl", form.mainPhoto.files[0]);
         data.append("firstName", form.firstName.value);
         data.append("lastName", form.lastName.value);
         data.append("gender", form.gender.value);
         data.append("phone", form.phone.value);
         data.append("email", form.email.value);
-        data.append("birthday", new Date(form.day.value + "." + form.month.value + "." + form.year.value));
+        data.append("birthday", new Date(form.month.value + "." + form.day.value + "." + form.year.value));
         data.append("height", form.height.value);
         data.append("weight", form.weight.value);
         data.append("eyeСolor", form.eyeСolor.value);
-        data.append("badHabits", form.badHabits.value);
+        data.append("smoke", form.smoke.value);
         data.append("aboutMe", form.aboutMe.value);
         $.ajax({
           url: "/client/second-half/review-forms",
