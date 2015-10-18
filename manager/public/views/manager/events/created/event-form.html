@@ -1,0 +1,73 @@
+<header class="accordion-navigation-header clearfix">
+  <h6>Created at:
+    <%
+      var createdAtObject = new Date(createdAt);
+      
+      var createdAtString = ("0" + createdAtObject.getUTCDate()).slice(-2) + "."
+                   + ("0" + (createdAtObject.getUTCMonth()+1)).slice(-2) + "."
+                   + createdAtObject.getUTCFullYear()
+                   + " "
+                   + ("0" + createdAtObject.getUTCHours()).slice(-2) + ":"
+                   + ("0" + createdAtObject.getUTCMinutes()).slice(-2);
+    
+      print(createdAtString);
+    %>
+  </h6>
+  <span id="toggle-activator" class="accordion-navigation-header-title">
+    <%= title %> 
+  </span>
+  <% if (show) { %>
+    <span class="label radius">Visible</span>
+  <% } %>
+  <% if (!show) { %>
+    <span class="label secondary radius">Invisible</span>
+  <% } %>
+  <ul class="button-group round right">
+    <li>
+      <button id="delete-button" class="button alert tiny no-margin-bottom">Delete</button>
+    </li>
+    <% if (show) { %>
+      <li>
+        <button id="hide-button" class="button secondary tiny no-margin-bottom">Hide</button>
+      </li>
+    <% } %>
+    <% if (!show) { %>
+      <li>
+        <button id="show-button" class="button success tiny no-margin-bottom">Show</button>
+      </li>
+    <% } %>
+  </ul>
+</header>
+<div class="content clearfix">
+  <ul class="pricing-table no-margin-bottom">
+    <li class="title">Date:
+      <%
+        var dateObject = new Date(date);
+        
+        var dateString = ("0" + dateObject.getUTCDate()).slice(-2) + "."
+                     + ("0" + (dateObject.getUTCMonth()+1)).slice(-2) + "."
+                     + dateObject.getUTCFullYear()
+                     + " "
+                     + ("0" + dateObject.getUTCHours()).slice(-2) + ":"
+                     + ("0" + dateObject.getUTCMinutes()).slice(-2);
+    
+        print(dateString);
+      %>
+    </li>
+    <li class="price">Address: <%= address %></li>
+    <li class="bullet-item">
+      <img id="main-photo" src="<%= posterUrl %>">
+    </li>
+    <li class="bullet-item">About: <%= about %></li>
+    <% if (show) { %>
+      <li class="cta-button">
+        <button id="hide-button" class="button secondary">Hide</button>
+      </li>
+    <% } %>
+    <% if (!show) { %>
+      <li class="cta-button">
+        <button id="show-button" class="button success">Show</button>
+      </li>
+    <% } %>
+  </ul>
+</div>

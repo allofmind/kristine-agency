@@ -1,0 +1,44 @@
+.future-events-list {
+
+}
+
+.future-events-list .future-event {
+  border-top: 1px solid #b5b5b5;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.future-events-list .future-event:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.future-events-list .future-event .future-event-title {
+  color: #1c1c1c;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.future-events-list .future-event .future-event-date {
+  color: #9c9c9c;
+  font-size: 19px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.future-events-list .future-event .future-event-poster-container {
+  
+}
+
+.future-events-list .future-event .future-event-poster-container .future-event-poster {
+  
+}
+
+.future-events-list .future-event .future-event-content {
+  color: rgba(28, 28, 28, 0.9);
+  text-align: left;
+}
+
+.future-events-list .future-event .future-event-map {
+  
+}

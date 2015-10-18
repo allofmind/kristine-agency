@@ -245,19 +245,3 @@ label #title {
   font-weight: 13px;
   font-family: "Cuprum";
 }
-
-button.simple-button {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-  background-color: rgba(28,28,28,.95);
-  padding: 10px 30px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-button.simple-button:hover {
-  opacity: 0.8;
-}

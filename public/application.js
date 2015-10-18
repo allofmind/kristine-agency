@@ -113,6 +113,12 @@ require([ "libraries/backbone-min" ], function () {
           viewName: "man",
           viewPath: "views/man/main"
         });
+      },
+      "events": function (params) {
+        this.mainLoader({
+          viewName: "events",
+          viewPath: "views/events/main"
+        });
       }
     },
     "mainLoader": function (params, callback) {

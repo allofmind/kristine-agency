@@ -77,13 +77,70 @@ require([
         this.navigate("#/other-half/new");
       },
       "other-half/new": function () {
-        this.otherHalfFormList([ 0 ]);
+        var router = this;
+        this.lvl2LeftBarViewLoader({
+          viewName: "other-half",
+          viewPath: "views/manager/other-half/main"
+        }, function () {
+          router.lvl3HalfEventViewLoader({
+            viewName: "other-half/review-forms-new",
+            viewPath: "views/manager/other-half/review-forms/main",
+            params: { acceptedFilterValue: [ 0 ] }
+          });
+        });
       },
       "other-half/accepted": function () {
-        this.otherHalfFormList([ 2 ]);
+        var router = this;
+        this.lvl2LeftBarViewLoader({
+          viewName: "other-half",
+          viewPath: "views/manager/other-half/main"
+        }, function () {
+          router.lvl3HalfEventViewLoader({
+            viewName: "other-half/review-forms-accepted",
+            viewPath: "views/manager/other-half/review-forms/main",
+            params: { acceptedFilterValue: [ 2 ] }
+          });
+        });
       },
       "other-half/denied": function () {
-        this.otherHalfFormList([ 1 ]);
+        var router = this;
+        this.lvl2LeftBarViewLoader({
+          viewName: "other-half",
+          viewPath: "views/manager/other-half/main"
+        }, function () {
+          router.lvl3HalfEventViewLoader({
+            viewName: "other-half/review-forms-denied",
+            viewPath: "views/manager/other-half/review-forms/main",
+            params: { acceptedFilterValue: [ 1 ] }
+          });
+        });
+      },
+      "events": function (callback) {
+        this.navigate("#/events/create");
+      },
+      "events/create": function (callback) {
+        var router = this;
+        this.lvl2LeftBarViewLoader({
+          viewName: "events",
+          viewPath: "views/manager/events/main"
+        }, function () {
+          router.lvl3HalfEventViewLoader({
+            viewName: "events/create",
+            viewPath: "views/manager/events/create/main"
+          });
+        });
+      },
+      "events/created": function (callback) {
+        var router = this;
+        this.lvl2LeftBarViewLoader({
+          viewName: "events",
+          viewPath: "views/manager/events/main"
+        }, function () {
+          router.lvl3HalfEventViewLoader({
+            viewName: "events/created",
+            viewPath: "views/manager/events/created/main"
+          });
+        });
       },
       "*All": function () { }
     },
@@ -102,13 +159,13 @@ require([
         if (callback) callback();
       }
     },
-    "otherHalfLoader": function (callback) {
+    "lvl2LeftBarViewLoader": function (options, callback) {
       var router = this;
       this.mainLoader(function () {
-        if (router.activeLvl2ViewName !== "other-half") {
-          router.activeLvl2ViewName = "other-half";
-          require([ "views/manager/other-half/main" ], function (OtherHalf) {
-            if (router.activeLvl2ViewName === "other-half") {
+        if (router.activeLvl2ViewName !== options.viewName) {
+          router.activeLvl2ViewName = options.viewName;
+          require([ options.viewPath ], function (OtherHalf) {
+            if (router.activeLvl2ViewName === options.viewName) {
               router.activeLvl2View = new OtherHalf();
               if (callback) callback();
             }
@@ -119,9 +176,24 @@ require([
         }
       });
     },
+    lvl3HalfEventViewLoader: function (options, callback) {
+      var router = this;
+      if (router.lvl3LeftBarViewName !== options.viewName) {
+        router.lvl3LeftBarViewName = options.viewName;
+        require([ options.viewPath ], function (module) {
+          if (router.lvl3LeftBarViewName === options.viewName) {
+            if (router.lvl3LeftBarView) router.lvl3LeftBarView.remove();
+            var view = router.lvl3LeftBarView = module(options.params);
+          }
+        });
+      }
+    },
     "otherHalfFormList": function (filterValue) {
       var router = this;
-      this.otherHalfLoader(function () {
+      this.lvl2LeftBarViewLoader({
+        viewName: "other-half",
+        viewPath: "views/manager/other-half/main"
+      }, function () {
         if (router.activeLvl1OtherHalfViewName !== "other-half/review-forms") {
           router.activeLvl1OtherHalfViewName = "other-half/review-forms";
           require([ "views/manager/other-half/review-forms/main" ], function (FormsToReview) {
@@ -129,9 +201,6 @@ require([
               var formsToReview = router.activeLvl1OtherHalfView = new FormsToReview({ acceptedFilterValue: filterValue });
             }
           });
-        }
-        else {
-          router.activeLvl1OtherHalfView.update({ acceptedFilterValue: filterValue });
         }
       });
     },

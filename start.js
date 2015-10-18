@@ -21,6 +21,7 @@ var app = express();
 
 var login = require(__dirname + "/api/login.js");
 var secondHalf = require(__dirname + "/api/second-half.js");
+var events = require(__dirname + "/api/events.js");
 
 var loginVerification = login.verification;
 var loginApi = login.api;
@@ -31,6 +32,7 @@ app.use(serveFavicon(__dirname + "/favicon.ico"));
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.static(path.join(__dirname, "/manager/public")));
 app.use("/files/photos", express.static(__dirname + "/files/photos"));
+app.use("/files/posters", express.static(__dirname + "/files/posters"));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
@@ -39,8 +41,9 @@ app.get("/manager", function (req, res) {
 });
 
 app.use(loginApi);
+// app.use(loginVerification);
 app.use(secondHalf({ database: sequelize }));
-app.use(loginVerification);
+app.use(events({ database: sequelize }));
 
 app.get("*", function (req, res) {
   res.writeHead(500);

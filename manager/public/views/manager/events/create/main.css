@@ -1,0 +1,13 @@
+form[name="create-event"] {
+
+}
+
+form[name="create-event"] textarea[name="about"] {
+  min-height: 130px;
+  resize: vertical;
+}
+
+form[name="create-event"] .poster {
+  max-width: 600px;
+  max-height: 350px;
+}

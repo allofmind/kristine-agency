@@ -5,12 +5,11 @@ define([
 ) {
 
   return Backbone.View.extend({
-    tagName: "div",
     events: {
     },
     initialize: function() {
       $("#main-left-bar a").removeClass("active");
-      $("#main-left-bar a[href=\"#/other-half/new\"]").addClass("active");
+      $("#main-left-bar a[href=\"#/events/create\"]").addClass("active");
       this.$el.append(template);
       $("#manager-content").html(this.$el);
     }

@@ -1,0 +1,28 @@
+<h1 class="future-event-title">
+  <%= title %>
+</h1>
+<h5 class="future-event-date">
+  <%
+    var MyDate = new Date(date);
+    var MyDateString;
+    
+    MyDateString = ("0" + MyDate.getUTCDate()).slice(-2) + "."
+                 + ("0" + (MyDate.getUTCMonth()+1)).slice(-2) + "."
+                 + MyDate.getUTCFullYear()
+                 + " "
+                 + ("0" + MyDate.getUTCHours()).slice(-2) + ":"
+                 + ("0" + MyDate.getUTCMinutes()).slice(-2);
+
+    print(MyDateString);
+  %> / <%= address %>
+</h5>
+<br class="lite"></br>
+<div class="future-event-poster-container">
+  <img class="future-event-poster" src="<%= posterUrl %>">
+</div>
+<br class="normal"></br>
+<div class="future-event-content">
+  <p>
+    <%= about %>
+  </p>
+</div>

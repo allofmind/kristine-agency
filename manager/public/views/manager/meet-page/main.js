@@ -1,5 +1,5 @@
 define([
-  "text!views/manager/meet-page/main.html"
+  "text!./main.html"
 ], function(
   template
 ) {

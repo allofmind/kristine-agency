@@ -71,30 +71,40 @@ main {
   padding: 10px 10px 10px 0;
 }
 
+.forms-list-article {
+  padding: 15px;
+}
+
+.list-of-forms,
 #forms-to-review-list {
   width: 100%;
 }
 
+.list-of-forms .accordion-navigation-header-title,
 #forms-to-review-list .accordion-navigation-header-title {
   font-size: 1.3em;
   cursor: pointer;
 }
 
+.form-item.active .accordion-navigation-header,
 #forms-to-review-item.active .accordion-navigation-header {
   background-color: #e3e3e3;
 }
 
+.form-item.active .content,
 #forms-to-review-item.active .content {
   display: block;
 }
 
+.form-item .label,
 #forms-to-review-item .label {
   top: -2px;
   margin-left: 3px;
 }
 
+.form-item #main-photo,
 #forms-to-review-item #main-photo {
-  height: 150px;
+  height: 300px;
 }
 
 button {
