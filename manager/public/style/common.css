@@ -60,6 +60,10 @@ main {
   float: left;
 }
 
+.cursor-default {
+  cursor: default !important;
+}
+
 #manager-content {
   float: left;
   width: calc(100% - 113px);

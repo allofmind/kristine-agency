@@ -10,7 +10,7 @@ requirejs.config({
       deps: [ "libraries/jquery-2.1.4.min" ]
     },
     "libraries/backbone-min": {
-      deps: [ "libraries/underscore-min", "libraries/jquery-2.1.4.min", "libraries/TweenMax.min.js" ],
+      deps: [ "libraries/underscore-min", "libraries/jquery-2.1.4.min", "libraries/TweenMax.min.js", "//tinymce.cachefly.net/4.2/tinymce.min.js" ],
       exports: "Backbone"
     },
     "libraries/underscore-min": {

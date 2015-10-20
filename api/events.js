@@ -49,7 +49,11 @@ module.exports = function (options) {
   });
 
   events.get("/events", function (req, res) {
-    Event.all().then(function (eventsData) {
+    Event.all({
+      where: {
+        show: true
+      }
+    }).then(function (eventsData) {
       res.json(eventsData);
     });
   });

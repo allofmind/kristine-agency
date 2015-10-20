@@ -51,15 +51,34 @@ define([
           fileReader.readAsDataURL(event.target.files[0]);
           this.model.set("posterUrl", event.target.files[0]);
         },
-        "input [name=\"about\"]": function (event) {
-          this.model.set("about", event.target.value);
-        },
         "change [name=\"show\"]": function (event) {
           this.model.set("show", event.target.checked);
         },
         "submit": function (event) {
-          this.model.save();
+          this.model.save({ }, {
+            success: function () {
+              alert("Event created.");
+              location.reload();
+            }
+          });
         }
+      },
+      initialize: function () {
+        var eventFormView = this;
+        editor = new Quill("#advanced-wrapper #editor", {
+          modules: {
+            "toolbar": {
+              container: "#advanced-wrapper #toolbar-container"
+            },
+            "link-tooltip": true,
+            "image-tooltip": true,
+            "multi-cursor": true
+          },
+          theme: "snow"
+        });
+        editor.on("text-change", function(delta, source) {
+          eventFormView.model.set("about", editor.getHTML());
+        });
       }
     });
 
@@ -70,11 +89,9 @@ define([
         $("#events-top-navigation a").parent().removeClass("active");
         $("#events-top-navigation a[href=\"#/events/create\"]").parent().addClass("active");
         this.$el.append(template);
-        var eventFormView = new EventFormView({ el: this.$el.find("form[name=\"create-event\"]") });
         $("#events-content").html(this.$el);
+        var eventFormView = new EventFormView({ el: this.$el.find("form[name=\"create-event\"]") });
       }
     }));
-
   };
-
 });

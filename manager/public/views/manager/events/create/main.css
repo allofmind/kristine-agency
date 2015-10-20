@@ -11,3 +11,24 @@ form[name="create-event"] .poster {
   max-width: 600px;
   max-height: 350px;
 }
+
+.editor-container {
+  border: 1px solid #cccccc;
+  margin-bottom: 16px;
+  min-height: 350px;
+}
+
+.editor-container .advanced-wrapper {
+  height: inherit;
+}
+
+.editor-container .editor {
+  border-top: 1px solid #cccccc;
+  font-size: 14px !important;
+}
+
+.editor ol,
+.editor ul {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}

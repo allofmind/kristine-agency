@@ -33,14 +33,68 @@
     </div>
     <div class="row">
       <div class="large-12 columns">
-        <label>About
-          <textarea name="about" placeholder="Some info" required>Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ... Описание предстоящего события ...</textarea>
+        <label class="cursor-default">About
+          <div id="editor-container" class="editor-container">
+            <div id="advanced-wrapper" class="advanced-wrapper">
+              <div id="toolbar-container" class="toolbar-container">
+                <span class="ql-format-group">
+                  <select title="Size" class="ql-size">
+                    <option value="10px">Size 10</option>
+                    <option value="14px" selected>Size 14</option>
+                    <option value="16px">Size 16</option>
+                    <option value="18px">Size 18</option>
+                    <option value="26px">Size 26</option>
+                  </select>
+                </span>
+                <span class="ql-format-group">
+                  <span title="Bold" class="ql-format-button ql-bold"></span>
+                  <span class="ql-format-separator"></span>
+                  <span title="Italic" class="ql-format-button ql-italic"></span>
+                  <span class="ql-format-separator"></span>
+                  <span title="Underline" class="ql-format-button ql-underline"></span>
+                </span>
+                <span class="ql-format-group">
+                  <select title="Text Color" class="ql-color">
+                    <option value="rgba(28, 28, 28, 0.9)" selected></option>
+                    <option value="#9c9c9c"></option>
+                    <option value="#000"></option>
+                    <option value="#fff"></option>
+                  </select>
+                  <span class="ql-format-separator"></span>
+                  <select title="Background Color" class="ql-background">
+                    <option value="#fff" selected></option>
+                    <option value="rgba(28, 28, 28, 0.9)"></option>
+                    <option value="#9c9c9c"></option>
+                    <option value="#000"></option>
+                  </select>
+                </span>
+                <span class="ql-format-group">
+                  <select title="Text Alignment" class="ql-align">
+                    <option value="left" selected></option>
+                    <option value="center"></option>
+                    <option value="right"></option>
+                    <option value="justify"></option>
+                  </select>
+                  <span class="ql-format-separator"></span>
+                  <span title="List" class="ql-format-button ql-list"></span>
+                  <span class="ql-format-separator"></span>
+                  <span title="Bullet" class="ql-format-button ql-bullet"></span>
+                </span>
+                <span class="ql-format-group">
+                  <span title="Link" class="ql-format-button ql-link"></span>
+                  <span class="ql-format-separator"></span>
+                  <span title="Image" class="ql-format-button ql-image"></span>
+                </span>
+              </div>
+              <div id="editor" class="editor"></div>
+            </div>
+          </div>
         </label>
       </div>
     </div>
     <div class="row">
       <div class="large-6 columns">
-        <label>Show after will creat
+        <label>Show after will create
           <input name="show" type="checkbox">
         </label>
       </div>

@@ -13,6 +13,10 @@
   border-top: 0;
 }
 
+.future-events-list .future-event:last-child {
+  padding-bottom: 0;
+}
+
 .future-events-list .future-event .future-event-title {
   color: #1c1c1c;
   font-size: 30px;
