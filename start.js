@@ -6,6 +6,7 @@ var bodyParser = require("body-parser");
 var serveFavicon = require("serve-favicon");
 var pg = require("pg");
 var Sequelize = require("sequelize");
+var email = require("emailjs");
 
 var sequelize = new Sequelize("dee8e77384ipme", "ippgkvtmbtfchu", "BAJF5pzi4LSlv0grXKyOz33hHM", {
     dialect:  "postgres",
@@ -17,16 +18,24 @@ var sequelize = new Sequelize("dee8e77384ipme", "ippgkvtmbtfchu", "BAJF5pzi4LSlv
     }
 });
 
+var email = email.server.connect({
+  user: "kristineagencyinfo@gmail.com",
+  password: "h3idbk884vjrjk8475gdvnfgeipk6",
+  host: "smtp.gmail.com",
+  ssl: true
+});
+
 var app = express();
 
 var login = require(__dirname + "/api/login.js");
 var secondHalf = require(__dirname + "/api/second-half.js");
 var events = require(__dirname + "/api/events.js");
+var feedback = require(__dirname + "/api/feedback.js");
 
 var loginVerification = login.verification;
 var loginApi = login.api;
 
-app.set("port", 5000);
+app.set("port", 5001);
 
 app.use(serveFavicon(__dirname + "/favicon.ico"));
 app.use(express.static(path.join(__dirname, "/public")));
@@ -44,6 +53,7 @@ app.use(loginApi);
 // app.use(loginVerification);
 app.use(secondHalf({ database: sequelize }));
 app.use(events({ database: sequelize }));
+app.use(feedback({ database: sequelize, email: email }));
 
 app.get("*", function (req, res) {
   res.writeHead(500);

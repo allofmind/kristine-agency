@@ -14,7 +14,7 @@
                  + ("0" + MyDate.getUTCMinutes()).slice(-2);
 
     print(MyDateString);
-  %> / <%= address %>
+  %> <%= address ? "/ " + address : "" %>
 </h5>
 <br class="lite"></br>
 <div class="future-event-poster-container">

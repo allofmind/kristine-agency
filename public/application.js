@@ -119,6 +119,12 @@ require([ "libraries/backbone-min" ], function () {
           viewName: "events",
           viewPath: "views/events/main"
         });
+      },
+      "contacts": function (params) {
+        this.mainLoader({
+          viewName: "contacts",
+          viewPath: "views/contacts/main"
+        });
       }
     },
     "mainLoader": function (params, callback) {

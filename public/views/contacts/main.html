@@ -1,0 +1,52 @@
+<div id="main-article">
+  <div class="centered-content">
+    <h1>Контакты</h1>
+    <br class="hard"></br>
+  </div>
+    <form name="sendContacts" action="javascript:void(0);">
+      <div class="form-container">
+        <h1 class="normal centered-content">Вы можете заполнить форму и мы свяжемся с вами:</h1>
+        <br class="lite">
+        <fieldset class="double">
+          <legend>Ваши данные:</legend>
+          <label class="tab-50">
+            <input name="name" type="text" required>
+            <br>
+            <span id="title">Как к вам обратиться *</span>
+          </label>
+          <label class="tab-50">
+            <input name="phone" type="text" required>
+            <br>
+            <span id="title">Телефон *</span>
+          </label>
+        </fieldset>
+        <br class="lite">
+        <fieldset class="multi">
+          <legend>Сообщение:</legend>
+          <label class="tab-100">
+            <textarea name="reason" maxlength="500"></textarea>
+            <br>
+            <span id="title">Причина, по которой вы хотите связаться с нами *</span>
+          </label>
+        </fieldset>
+        <div id="load-form-screen" class="load-form-screen">
+          <span class="loader-item first">
+            <span class="loader-item">
+              <span class="loader-item">
+                <span class="loader-item">
+                  <span class="loader-item">
+                    <span class="loader-item"></span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+      <br class="normal">
+      <div class="centered-content">
+        <button id="send-button" class="simple-button">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
