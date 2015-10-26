@@ -7,15 +7,14 @@ requirejs.config({
   },
   shim: {
     "libraries/backbone-min": {
-      deps: [ "libraries/underscore-min", "libraries/jquery-2.1.4.min", "libraries/TweenMax.min.js" ],
+      deps: [ "libraries/underscore-min", "libraries/jquery-2.1.4.min", "libraries/TweenMax.min.js", "libraries/jquery-ui.js" ],
       exports: "Backbone"
     },
     "libraries/underscore-min": {
       exports: "_"
     },
-    "libraries/jquery.mobile.custom.js": {
-      deps: [ "libraries/jquery-2.1.4.min" ],
-      exports: "$"
+    "libraries/jquery-ui.js": {
+      deps: [ "libraries/jquery-2.1.4.min" ]
     }
   },
   waitSeconds: 50
@@ -108,6 +107,26 @@ require([ "libraries/backbone-min" ], function () {
           viewPath: "views/woman/main"
         });
       },
+      "woman/search": function (params) {
+        var router = this;
+        this.mainLoader({
+          viewName: "woman",
+          viewPath: "views/woman/main"
+        }, function (parentView) {
+          if (!router.womanSearch) {
+            require([ "views/woman/search/main" ], function (WomanSearch) {
+              router.womanSearch = new WomanSearch();
+              parentView.searchView = router.womanSearch;
+              parentView.$el.find("#search-filter-container").append(parentView.searchView.$el);
+              router.womanSearch.open();
+            });
+          }
+          else {
+            parentView.$el.find("#search-filter-container").append(parentView.searchView.$el);
+            router.womanSearch.open();
+          }
+        });
+      },
       "man": function (params) {
         this.mainLoader({
           viewName: "man",
@@ -147,11 +166,11 @@ require([ "libraries/backbone-min" ], function () {
             opacity: 1
           });
           $("#main-section").append(view.$el);
-          if (callback) callback();
+          if (callback) callback(view);
         });
       }
       else {
-        if (callback) callback();
+        if (callback) callback(router.activeViewLvl1);
       }
     },
     initialize: function () {

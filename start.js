@@ -35,7 +35,7 @@ var feedback = require(__dirname + "/api/feedback.js");
 var loginVerification = login.verification;
 var loginApi = login.api;
 
-app.set("port", 5001);
+app.set("port", 5000);
 
 app.use(serveFavicon(__dirname + "/favicon.ico"));
 app.use(express.static(path.join(__dirname, "/public")));

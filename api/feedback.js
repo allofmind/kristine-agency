@@ -31,10 +31,8 @@ module.exports = function (options) {
     form.on("close", function () {
       Feedback.sync({ force: true }).then(function () {
         Feedback.create(result).then(function (feedbackData) {
-          var createdAtObject = new Date(feedbackData.createdAt);
-          var createdAtParsed = ("0" + createdAtObject.getDate()).slice(-2) + "." + ("0" + (createdAtObject.getMonth()+1)).slice(-2) + "." + createdAtObject.getFullYear() + " " + ("0" + createdAtObject.getHours()).slice(-2) + ":" + ("0" + createdAtObject.getMinutes()).slice(-2);
           email.send({
-            subject: "Принята новыя заявка на контакт " + createdAtParsed,
+            subject: "Принята новыя заявка на контакт.",
             from: "kristineagencyinfo@gmail.com",
             to: "timetoburnfire@gmail.com,369tree369@gmail.com",
             text: "От кого: " + feedbackData.name + "." + "\nТелефон: " + feedbackData.phone + "\nПричина: " + feedbackData.reason + "."

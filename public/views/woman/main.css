@@ -1,5 +1,24 @@
-.forms-profile-container {
+.search-button {
+  cursor: pointer;
+  user-select: none;  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 
+.search-filter {
+  display: none;
+}
+
+.search-filter.active {
+  display: block;
+}
+
+
+
+.forms-profile-container {
+  position: relative;
+  min-height: 350px;
 }
 
 .forms-profile-container .form-profile {
@@ -50,3 +69,5 @@
 .forms-profile-container .form-profile .form-profile-info h1 {
   font-size: 20px;
 }
+
+

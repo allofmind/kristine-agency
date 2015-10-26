@@ -54,6 +54,7 @@ define([
       },
       render: function () {
         var formsCollection = this;
+        formsCollection.load();
         formsCollection.fetch({
           data: {
             where: JSON.stringify({
@@ -62,18 +63,56 @@ define([
             })
           },
           success: function (collection) {
-            formsCollection.$container.html("");
+            formsCollection.$collectionContainer.html("");
             collection.sort();
             collection.each(function (formModel) {
               var formView = new FormView({ model: formModel });
               formView.render();
-              formsCollection.$container.append(formView.$el);
+              formsCollection.$collectionContainer.append(formView.$el);
             });
+            formsCollection.loaded();
+          }
+        });
+      },
+      load: function () {
+        var formsCollection = this;
+        TweenMax.to(formsCollection.$collectionContainer, 0.3, {
+          opacity: 0,
+          onComplete: function () {
+            formsCollection.$collectionContainer.css("display", "none");
+          }
+        });
+        TweenMax.fromTo(formsCollection.$loadFormScreen, 0.3, {
+          opacity: 0
+        }, {
+          opacity: 1,
+          onStart: function () {
+            formsCollection.$loadFormScreen.css("display", "block");
+          }
+        });
+      },
+      loaded: function () {
+        var formsCollection = this;
+        TweenMax.fromTo(formsCollection.$collectionContainer, 0.3, {
+          opacity: 0
+        }, {
+          opacity: 1,
+          onStart: function () {
+            formsCollection.$collectionContainer.css("display", "block");
+          }
+        });
+        TweenMax.to(formsCollection.$loadFormScreen, 0.3, {
+          opacity: 0,
+          onComplete: function () {
+            formsCollection.$loadFormScreen.css("display", "none");
           }
         });
       },
       initialize: function (options) {
-        this.$container = options.$container;
+        var formsCollection = this;
+        formsCollection.$container = options.$container;
+        formsCollection.$collectionContainer = formsCollection.$container.find("#forms-profile");
+        formsCollection.$loadFormScreen = formsCollection.$container.find("#load-form-screen");
       }
     });
   
@@ -82,10 +121,24 @@ define([
     var MainView = Backbone.View.extend({
       tagName: "article",
       id: "main-article-wrap",
+      events: {
+        "click #search-button": function () {
+          var mainView = this;
+          if (Backbone.history.fragment.indexOf("woman/search") === -1) {
+            Backbone.history.navigate("#/woman/search");
+          }
+          else {
+            Backbone.history.navigate("#/woman");
+            mainView.searchView.close();
+          }
+        }
+      },
       initialize: function() {
         this.$el.html(template);
+        this.$searchFormContainer = this.$el.find("#filter-container");
         formsCollection = new FormsCollection({ $container: this.$el.find("#forms-profile-container") });
         formsCollection.render();
+        this.$filterContainer = this.$el.find("#filter-container");
       }
     });
 

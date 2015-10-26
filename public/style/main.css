@@ -383,6 +383,11 @@ label #title {
   font-family: "Cuprum";
 }
 
+input.for-range {
+  background-color: transparent;
+  border: 0;
+}
+
 #send-form-screen {
   display: none;
   position: absolute;
@@ -464,5 +469,68 @@ label #title {
   }
   to {
     -webkit-transform: rotateZ(0deg)
+  }
+}
+
+
+
+
+.loader-container,
+.loader {
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  box-shadow: -8px 0 0 3px #c2c2c2, 0 -8px 0 3px #c2c2c2, 8px 0 0 3px #c2c2c2, 0 8px 0 3px #c2c2c2;
+  -webkit-animation: rotate 3s ease-in-out infinite;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+.loader-container {
+  position: absolute;
+  left: calc(50% - 1px);
+  top: calc(50% - 1px);
+}
+
+.loader {
+  opacity: 0.25;
+}
+
+@-webkit-keyframes rotate {
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.25);
+  }
+}
+
+@keyframes rotate {
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.25);
+    transform: rotate(360deg) scale(1.25);
+  }
+}
+ 
+@-webkit-keyframes scaleY {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+  }
+  30%, 70% {
+    -webkit-transform: scaleY(0.5);
+  }
+  40%, 60% {
+    -webkit-transform: scaleY(0.1);
+  }
+}
+
+@keyframes scaleY {
+  5%, 95% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  20%, 80% {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+  45%, 55% {
+    -webkit-transform: scaleY(0.1);
+    transform: scaleY(0.1);
   }
 }
