@@ -10,39 +10,89 @@
   <p>
     Возраст: <%= (new Date(Date.now() - new Date(birthday).getTime())).getUTCFullYear() - 1970 %> лет
   </p>
-  <% if (height) { %>
+  <% if (typeof looking === "number") { %>
+    <p>Ищу:
+      <% switch (looking) { case 0: %>
+          Парня
+        <% break; case 1: %>
+          Девушку
+        <% break; case 2: %>
+          Другое
+        <% break; } %>
+    </p>
+  <% } %>
+  <% if (typeof intention === "number") { %>
+    <p>Цель знакомства:
+      <% switch (intention) { case 0: %>
+          Дружба
+        <% break; case 1: %>
+          Близкие отношения
+        <% break; case 2: %>
+          Другое
+        <% break; } %>
+    </p>
+  <% } %>
+  <% if (typeof height === "number") { %>
     <p>Рост: <%= height %> см</p>
   <% } %>
-  <% if (weight) { %>
+  <% if (typeof weight === "number") { %>
     <p>Вес: <%= weight %> кг</p>
   <% } %>
-  <% if (eyeСolor) { %>
+  <% if (typeof eye === "number") { %>
     <p>Цвет глаз:
-      <% switch (eyeСolor) { case 1: %>
+      <% switch (eye) { case 0: %>
           Карие
-        <% break; case 2: %>
+        <% break; case 1: %>
           Зелёные
-        <% break; case 3: %>
+        <% break; case 2: %>
           Серые
-        <% break; case 4: %>
+        <% break; case 3: %>
           Синие
-        <% break; case 5: %>
+        <% break; case 4: %>
           Другой
         <% break; } %>
   <% } %>
-  <% if (smoke) { %>
-    <p>Курение:
-      <% switch (smoke) { case 1: %>
-          Да
+  <% if (typeof work === "number") { %>
+    <p>Спиртные напитки:
+      <% switch (work) { case 0: %>
+          Учусь
+        <% break; case 1: %>
+          Работаю
         <% break; case 2: %>
-          Иногда
+          Фриланс
         <% break; case 3: %>
+          Другое
+        <% break; } %>
+    </p>
+  <% } %>
+  <% if (typeof smoke === "number") { %>
+    <p>Курение:
+      <% switch (smoke) { case 0: %>
+          Да
+        <% break; case 1: %>
+          Иногда
+        <% break; case 2: %>
           Нет
         <% break; } %>
     </p>
   <% } %>
-  <% if (aboutMe) { %>
-    <p>О себе: <%= aboutMe %></p>
+  <% if (typeof drink === "number") { %>
+    <p>Спиртные напитки:
+      <% switch (drink) { case 0: %>
+          Да
+        <% break; case 1: %>
+          Иногда
+        <% break; case 2: %>
+          Нет
+        <% break; } %>
+    </p>
+  <% } %>
+  <% if (about) { %>
+    <p>О себе: <%= about %></p>
+  <% } %>
+  <br class="lite"/>
+  <% if (id) { %>
+    <p>Номер анкеты: <%= id %></p>
   <% } %>
 </div>
 

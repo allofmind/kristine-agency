@@ -10,59 +10,24 @@ module.exports = function (options) {
   var sequelizeDatabase = options.database;
 
   var SecondHalfReviewForm = sequelizeDatabase.define("second-half-review-form", {
-    mainPhotoUrl: {
-      type: sequelize.STRING,
-      defaultValue: null
-    },
-    firstName: {
-      type: sequelize.STRING,
-      defaultValue: null
-    },
-    lastName: {
-      type: sequelize.STRING,
-      defaultValue: null
-    },
-    gender: {
-      type: sequelize.FLOAT,
-      defaultValue: null
-    },
-    phone: {
-      type: sequelize.STRING,
-      unique: true,
-      defaultValue: null
-    },
-    email: {
-      type: sequelize.STRING,
-      unique: true,
-      defaultValue: null,
-      validate: {
-        isEmail: true
-      }
-    },
+    mainPhotoUrl: sequelize.STRING,
+    firstName: sequelize.STRING,
+    gender: sequelize.FLOAT,
     birthday: {
       type: sequelize.DATE,
       defaultValue: sequelize.NOW
     },
-    height: {
-      type: sequelize.FLOAT,
-      defaultValue: null
-    },
-    weight: {
-      type: sequelize.FLOAT,
-      defaultValue: null
-    },
-    eyeСolor: {
-      type: sequelize.FLOAT,
-      defaultValue: null
-    },
-    smoke: {
-      type: sequelize.FLOAT,
-      defaultValue: null
-    },
-    aboutMe: {
-      type: sequelize.STRING(1000),
-      defaultValue: null
-    },
+    email: sequelize.STRING,
+    phone: sequelize.STRING,
+    looking: sequelize.FLOAT,
+    intention: sequelize.FLOAT,
+    height: sequelize.FLOAT,
+    weight: sequelize.FLOAT,
+    eye: sequelize.FLOAT,
+    work: sequelize.FLOAT,
+    smoke: sequelize.FLOAT,
+    drink: sequelize.FLOAT,
+    about: sequelize.STRING(1000),
     accepted: {
       type: sequelize.FLOAT,
       defaultValue: 0
@@ -91,24 +56,30 @@ module.exports = function (options) {
         var fileName = part.filename;
         var mainPhotoId = (new Date()).getTime().toString();
         var pathToSave = path.join("files/photos/users/", mainPhotoId + "-" + fileName);
-        reviewForm[fieldName] = pathToSave;
+        reviewForm.mainPhotoUrl = pathToSave;
         var writeStream = fs.createWriteStream(pathToSave);
         part.pipe(writeStream);
       }
     });
-    form.on("close", function (part) {
-      SecondHalfReviewForm.sync().then(function () {
-        res.end();
-        return SecondHalfReviewForm.create(reviewForm);
+    form.on("close", function () {
+      SecondHalfReviewForm.create(reviewForm).then(function (form) {
+        res.json(form);
       });
     });
     form.parse(req);
   });
 
+  secondHalf.get("/server/second-half/review-forms", function (req, res) {
+    SecondHalfReviewForm.findAll(req.query).then(function (allSecondHalfReviewForms) {
+      res.json(allSecondHalfReviewForms);
+    });
+  });
+
   secondHalf.get("/client/second-half/review-forms", function (req, res) {
-    var where = req.query.where ? JSON.parse(req.query.where) : { };
+    var attributes = [ "mainPhotoUrl", "firstName", "gender", "birthday", "looking", "intention", "height", "weight", "eye", "work", "smoke", "drink", "about" ];
     SecondHalfReviewForm.findAll({
-      where: where
+      attributes: attributes,
+      where: req.query.where
     }).then(function (allSecondHalfReviewForms) {
       res.json(allSecondHalfReviewForms);
     });

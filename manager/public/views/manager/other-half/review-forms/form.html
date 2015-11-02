@@ -36,48 +36,94 @@
       <img id="main-photo" src="<%= mainPhotoUrl %>">
     </li>
     <li class="bullet-item">Gender:
-      <% switch (gender) { case 1: %>
+      <% switch (gender) { case 0: %>
           Man
-        <% break; case 2: %>
+        <% break; case 1: %>
           Woman
         <% break; } %>
     </li>
     <li class="bullet-item">Age: <%= (new Date(Date.now() - new Date(birthday).getTime())).getUTCFullYear() - 1970 %> year
     </li>
+    <% if (typeof looking === "number") { %>
+      <li class="bullet-item">Looking for:
+        <% switch (looking) { case 0: %>
+            Man
+          <% break; case 1: %>
+            Woman
+          <% break; case 2: %>
+            Other
+          <% break; } %>
+      </li>
+    <% } %>
+    <% if (typeof intention === "number") { %>
+      <li class="bullet-item">Intention:
+        <% switch (intention) { case 0: %>
+            Friendship
+          <% break; case 1: %>
+            Love relationship
+          <% break; case 2: %>
+            Other
+          <% break; } %>
+      </li>
+    <% } %>
     <% if (height) { %>
       <li class="bullet-item">Height: <%= height %> cm</li>
     <% } %>
     <% if (weight) { %>
       <li class="bullet-item">Weight: <%= weight %> kg</li>
     <% } %>
-    <% if (eyeСolor) { %>
+    <% if (typeof eye === "number") { %>
       <li class="bullet-item">Eye color:
-        <% switch (eyeСolor) { case 1: %>
+        <% switch (eye) { case 0: %>
             Brown
-          <% break; case 2: %>
+          <% break; case 1: %>
             Green
-          <% break; case 3: %>
+          <% break; case 2: %>
             Gray
-          <% break; case 4: %>
+          <% break; case 3: %>
             Blue
-          <% break; case 5: %>
+          <% break; case 4: %>
             Other
           <% break; } %>
       </li>
     <% } %>
-    <% if (smoke) { %>
-      <li class="bullet-item">Smoke:
-        <% switch (smoke) { case 1: %>
-            Yes
+    <% if (typeof work === "number") { %>
+      <li class="bullet-item">Work:
+        <% switch (work) { case 0: %>
+            Study
+          <% break; case 1: %>
+            Work
           <% break; case 2: %>
-            Sometimes
+            Freelance
           <% break; case 3: %>
+            Other
+          <% break; } %>
+      </li>
+    <% } %>
+    <% if (typeof smoke === "number") { %>
+      <li class="bullet-item">Smoke:
+        <% switch (smoke) { case 0: %>
+            Yes
+          <% break; case 1: %>
+            Sometimes
+          <% break; case 2: %>
             Not
           <% break; } %>
       </li>
     <% } %>
-    <% if (aboutMe) { %>
-      <li class="bullet-item">About: <%= aboutMe %></li>
+    <% if (typeof drink === "number") { %>
+      <li class="bullet-item">Drink:
+        <% switch (drink) { case 0: %>
+            Yes
+          <% break; case 1: %>
+            Sometimes
+          <% break; case 2: %>
+            Not
+          <% break; } %>
+      </li>
+    <% } %>
+    <% if (about) { %>
+      <li class="bullet-item">About: <%= about %></li>
     <% } %>
     <% if (accepted === 2) { %>
       <li class="cta-button">

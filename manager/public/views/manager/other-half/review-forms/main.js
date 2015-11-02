@@ -93,7 +93,7 @@ define([
     });
   
     var ReviewFormCollection = Backbone.Collection.extend({
-      url: "/client/second-half/review-forms",
+      url: "/server/second-half/review-forms",
       model: ReviewFormModel,
       comparator: function (current, next) {
         var currentAccepted = current.get("accepted");
@@ -143,12 +143,10 @@ define([
           }
         }
       },
-      render: function (acceptedFilterValue) {
+      render: function (params) {
         var $formsToReviewContainer = $("#forms-to-review-list");
         this.fetch({
-          data: {
-            where: JSON.stringify({ accepted: acceptedFilterValue })
-          },
+          data: $.param(params),
           success: function (collection) {
             $formsToReviewContainer.html("");
             collection.sort();
@@ -173,7 +171,7 @@ define([
         $("#other-half-content").html(this.$el);
         this.$el.append(template);
         reviewFormCollection = new ReviewFormCollection();
-        reviewFormCollection.render(options.acceptedFilterValue);
+        reviewFormCollection.render(options);
       }
     }));
 

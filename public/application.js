@@ -22,6 +22,87 @@ requirejs.config({
 
 require([ "libraries/backbone-min" ], function () {
 
+  var paramsHandler = function (a) {
+    var prefix, s, add, name, r20, output;
+    s = [];
+    r20 = /%20/g;
+    add = function (key, value) {
+      value = (typeof value == "function") ? value() : (value == null ? "" : value);
+      s[s.length] = encodeURIComponent(key) + "=" + encodeURIComponent(value);
+    };
+    if (a instanceof Array) {
+      for (name in a) {
+        add(name, a[name]);
+      }
+    } else {
+      for (prefix in a) {
+        paramsHandler.buildParams(prefix, a[prefix], add);
+      }
+    }
+    output = s.join("&");
+    return output;
+  };
+  paramsHandler.buildParams = function (prefix, obj, add) {
+    var name, i, l, rbracket;
+    rbracket = /\[\]$/;
+    if (obj instanceof Array) {
+      for (i = 0, l = obj.length; i < l; i++) {
+        if (rbracket.test(prefix)) {
+          add(prefix, obj[i]);
+        } else {
+          paramsHandler.buildParams(prefix + "[" + (typeof obj[i] === "object" ? i : "") + "]", obj[i], add);
+        }
+      }
+    } else if (typeof obj == "object") {
+      for (name in obj) {
+        paramsHandler.buildParams(prefix + "[" + name + "]", obj[name], add);
+      }
+    } else {
+      add(prefix, obj);
+    }
+  };
+
+  var queryHandler = function(query) {
+    var nvp = query.split("&");
+    var data = {};
+    for( var i = 0 ; i < nvp.length ; i++ ){
+      var pair = nvp[i].split("=");
+      var name = decodeURIComponent(pair[0]);
+      var value = decodeURIComponent(pair[1]);
+      var path = name.match(/(^[^\[]+)(\[.*\]$)?/);
+      var first = path[1];
+      if(path[2]){
+        path = path[2].match(/(?=\[(.*)\]$)/)[1].split("][")
+      }else{
+        path = [];
+      }
+      path.unshift(first);
+      queryHandler.setValue(data, path, value);
+    }
+    return data;
+  };
+  queryHandler.setValue = function(root, path, value){
+    if(path.length > 1){
+      var dir = path.shift();
+      if( typeof root[dir] == "undefined" ){
+        root[dir] = path[0] == "" ? [] : {};
+      }
+      arguments.callee(root[dir], path, value);
+    }
+    else {
+      if(root instanceof Array){
+        root.push(value);
+      }else{
+        root[path] = value;
+      }
+    }
+  };
+
+  jQuery.extend({
+    param: paramsHandler,
+    query: queryHandler
+  });
+
   $(function () {
 
   var MainView = Backbone.View.extend({
@@ -87,6 +168,8 @@ require([ "libraries/backbone-min" ], function () {
         this.mainLoader({
           viewName: "service",
           viewPath: "views/service/main"
+        }, function (ServiceView) {
+          return new ServiceView();
         });
       },
       "service/find-love": function (params) {
@@ -94,37 +177,87 @@ require([ "libraries/backbone-min" ], function () {
         this.mainLoader({
           viewName: "service",
           viewPath: "views/service/main"
-        }, function () {
+        }, function (ServiceView) {
+          var serviceView = new ServiceView();
+          require([ "views/service/find-love/main" ], function (FindLove) {
+            var findLove = router.findLove = new FindLove();
+            $("body").append(findLove.$el);
+          });
+          return serviceView;
+        }, function (serviceView) {
           require([ "views/service/find-love/main" ], function (FindLove) {
             var findLove = router.findLove = new FindLove();
             $("body").append(findLove.$el);
           });
         });
       },
-      "woman": function (params) {
+      "woman": function () {
         this.mainLoader({
           viewName: "woman",
           viewPath: "views/woman/main"
+        }, function (WomanView) {
+          var womanView = new WomanView();
+          womanView.render({
+            where: {
+              accepted: 2,
+              gender: 1
+            }
+          });
+          womanView.searchFormView.closed();
+          return womanView;
+        }, function (womanView) {
+          womanView.searchFormView.close();
+          womanView.render({
+            where: {
+              accepted: 2,
+              gender: 1
+            }
+          });
         });
       },
-      "woman/search": function (params) {
-        var router = this;
+      "woman/find-id/:id": function (id) {
         this.mainLoader({
           viewName: "woman",
           viewPath: "views/woman/main"
-        }, function (parentView) {
-          if (!router.womanSearch) {
-            require([ "views/woman/search/main" ], function (WomanSearch) {
-              router.womanSearch = new WomanSearch();
-              parentView.searchView = router.womanSearch;
-              parentView.$el.find("#search-filter-container").append(parentView.searchView.$el);
-              router.womanSearch.open();
-            });
-          }
-          else {
-            parentView.$el.find("#search-filter-container").append(parentView.searchView.$el);
-            router.womanSearch.open();
-          }
+        }, function (WomanView) {
+          var womanView = new WomanView();
+          womanView.render({
+            where: {
+              accepted: 2,
+              gender: 1,
+              id: id
+            }
+          });
+          womanView.searchFormView.closed();
+          return womanView;
+        }, function (womanView) {
+          womanView.searchFormView.close();
+          womanView.render({
+            where: {
+              accepted: 2,
+              gender: 1,
+              id: id
+            }
+          });
+        });
+      },
+      "woman/find-params": function (queryString) {
+        var query = $.query(queryString);
+        query.accepted = 2;
+        query.gender = 1;
+        this.mainLoader({
+          viewName: "woman",
+          viewPath: "views/woman/main"
+        }, function (WomanView) {
+          var womanView = new WomanView();
+          womanView.searchFormView.opened();
+          womanView.render({ where: query });
+          return womanView;
+        }, function (womanView) {
+          womanView.searchFormView.open();
+          womanView.render({
+            where: query
+          });
         });
       },
       "man": function (params) {
@@ -146,12 +279,12 @@ require([ "libraries/backbone-min" ], function () {
         });
       }
     },
-    "mainLoader": function (params, callback) {
+    "mainLoader": function (params, callback, update) {
       var router = this;
       if (router.activeViewLvl1Name !== params.viewName) {
         mainHeaderView.setDeactive();
         router.activeViewLvl1Name = params.viewName;
-        require([ params.viewPath ], function (module) {
+        require([ params.viewPath ], function (Module) {
           if (router.activeViewLvl1) {
             var prevActive = router.activeViewLvl1;
             TweenMax.set(prevActive.$el, { position: "absolute" });
@@ -160,17 +293,17 @@ require([ "libraries/backbone-min" ], function () {
               onComplete: function () { prevActive.remove(); }
             });
           }
-          var view = module();
+          var View = Module();
+          var view = callback(View);
           router.activeViewLvl1 = view;
           TweenMax.fromTo(view.$el, 0.6, { opacity: 0 }, {
             opacity: 1
           });
           $("#main-section").append(view.$el);
-          if (callback) callback(view);
         });
       }
       else {
-        if (callback) callback(router.activeViewLvl1);
+        if (update) update(router.activeViewLvl1);
       }
     },
     initialize: function () {

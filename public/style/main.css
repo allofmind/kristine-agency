@@ -109,6 +109,10 @@ br.hard {
   text-align: center;
 }
 
+.righted-content {
+  text-align: right;
+}
+
 .button-pink {
   padding: 1em 2.5em;
   color: #fff;
@@ -124,31 +128,38 @@ br.hard {
   opacity: 0.8;
 }
 
+a.simple-button,
 button.simple-button {
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
   background-color: rgba(28,28,28,.95);
   padding: 10px 30px;
+  margin: 5px 0px 5px;
   text-align: center;
   cursor: pointer;
   outline: none;
   transition: opacity 0.3s ease-in-out;
 }
 
+a.simple-button:hover,
 button.simple-button:hover {
   opacity: 0.8;
 }
 
+a.simple-button[disabled],
 button.simple-button[disabled] {
   cursor: default;
   animation: sended 1.5s ease-in-out infinite;
 }
 
+a.simple-button[disabled].sended,
 button.simple-button[disabled].sended {
   animation-play-state: paused;
 }
 
+a.simple-button[disabled]:hover,
 button.simple-button[disabled]:hover {
   opacity: initial;
 }

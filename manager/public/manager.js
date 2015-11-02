@@ -85,7 +85,11 @@ require([
           router.lvl3HalfEventViewLoader({
             viewName: "other-half/review-forms-new",
             viewPath: "views/manager/other-half/review-forms/main",
-            params: { acceptedFilterValue: [ 0 ] }
+            params: {
+              where: {
+                accepted: 0
+              }
+            }
           });
         });
       },
@@ -98,7 +102,11 @@ require([
           router.lvl3HalfEventViewLoader({
             viewName: "other-half/review-forms-accepted",
             viewPath: "views/manager/other-half/review-forms/main",
-            params: { acceptedFilterValue: [ 2 ] }
+            params: {
+              where: {
+                accepted: 2
+              }
+            }
           });
         });
       },
@@ -111,7 +119,11 @@ require([
           router.lvl3HalfEventViewLoader({
             viewName: "other-half/review-forms-denied",
             viewPath: "views/manager/other-half/review-forms/main",
-            params: { acceptedFilterValue: [ 1 ] }
+            params: {
+              where: {
+                accepted: 1
+              }
+            }
           });
         });
       },
