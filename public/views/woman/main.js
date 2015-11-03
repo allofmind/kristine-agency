@@ -12,40 +12,19 @@ define([
 
     var SearchFormModel = Backbone.Model.extend({
       defaults: {
-        lookingFor: null,
+        mainPhotoUrl: null,
+        firstName: null,
+        gender: null,
+        birthday: null,
+        looking: null,
         intention: null,
-        ageFrom: null,
-        ageTo: null,
-        heightFrom: null,
-        heightTo: null,
-        weightFrom: null,
-        weightTo: null,
+        height: null,
+        weight: null,
+        eye: null,
         work: null,
-        eyeСolor: null,
         smoke: null,
-        alcohol: null,
-        id: null
-      }
-    });
-
-    var FormModel = Backbone.Model.extend({
-      defaults: {
-        id: null,
-        mainPhotoUrl: "",
-        firstName: "",
-        lastName: "",
-        gender: "",
-        email: "",
-        phone: "",
-        birthday: "",
-        height: "",
-        weight: "",
-        eyeСolor: "",
-        badHabits: "",
-        aboutMe: "",
-        createdAt: "",
-        updatedAt: "",
-        accepted: null
+        drink: null,
+        about: null
       }
     });
 
@@ -58,7 +37,7 @@ define([
     });
   
     var FormsCollection = Backbone.Collection.extend({
-      model: FormModel,
+      model: SearchFormModel,
       url: "/client/second-half/review-forms",
       comparator: function (current, next) {
         var currentCreatedAt = current.get("createdAt");
@@ -188,7 +167,7 @@ define([
           var mainView = this;
           var currentUrl = Backbone.history.fragment;
           if (currentUrl === "woman" || currentUrl.indexOf("woman/find-id/") !== -1) {
-            this.joinedToFindFrom = Backbone.history.fragment;
+            // this.joinedToFindFrom = Backbone.history.fragment;
             var query = { };
             _.each(this.searchFormView.model.toJSON(), function (value, prop) {
               if (value) query[prop] = value;
@@ -196,12 +175,13 @@ define([
             Backbone.history.navigate("#/woman/find-params?" + $.param(query));
           }
           else {
-            if (this.joinedToFindFrom) {
-              Backbone.history.navigate("#/" + this.joinedToFindFrom);
-            }
-            else {
-              Backbone.history.navigate("#/woman");
-            }
+            Backbone.history.navigate("#/woman");
+            // if (this.joinedToFindFrom) {
+            //   Backbone.history.navigate("#/" + this.joinedToFindFrom);
+            // }
+            // else {
+            //   Backbone.history.navigate("#/woman");
+            // }
           }
         }
       },
@@ -225,24 +205,6 @@ define([
 
 
 
-
-    var SearchFormModel = Backbone.Model.extend({
-      defaults: {
-        lookingFor: null,
-        intention: null,
-        ageFrom: null,
-        ageTo: null,
-        heightFrom: null,
-        heightTo: null,
-        weightFrom: null,
-        weightTo: null,
-        work: null,
-        eyeСolor: null,
-        smoke: null,
-        alcohol: null
-      }
-    });
-  
     var SearchFormView = Backbone.View.extend({
       model: new SearchFormModel(),
       // id: "search-filter",

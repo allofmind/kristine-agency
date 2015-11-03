@@ -1,0 +1,48 @@
+<div class="form-profile-gallery">
+  <div class="main-photo-container">
+    <img src="<%= mainPhotoUrl %>">
+  </div>
+</div>
+<div class="form-profile-info">
+  <h1>
+    <%= firstName %>
+  </h1>
+  <p>
+    Возраст: <%= (new Date(Date.now() - new Date(birthday).getTime())).getUTCFullYear() - 1970 %> лет
+  </p>
+  <% if (height) { %>
+    <p>Рост: <%= height %> см</p>
+  <% } %>
+  <% if (weight) { %>
+    <p>Вес: <%= weight %> кг</p>
+  <% } %>
+  <% if (eyeСolor) { %>
+    <p>Цвет глаз:
+      <% switch (eyeСolor) { case 1: %>
+          Карие
+        <% break; case 2: %>
+          Зелёные
+        <% break; case 3: %>
+          Серые
+        <% break; case 4: %>
+          Синие
+        <% break; case 5: %>
+          Другой
+        <% break; } %>
+  <% } %>
+  <% if (smoke) { %>
+    <p>Курение:
+      <% switch (smoke) { case 1: %>
+          Да
+        <% break; case 2: %>
+          Иногда
+        <% break; case 3: %>
+          Нет
+        <% break; } %>
+    </p>
+  <% } %>
+  <% if (aboutMe) { %>
+    <p>О себе: <%= aboutMe %></p>
+  <% } %>
+</div>
+

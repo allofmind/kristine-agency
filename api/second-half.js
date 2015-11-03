@@ -75,8 +75,20 @@ module.exports = function (options) {
     });
   });
 
+  secondHalf.put("/server/second-half/review-forms/:id", function (req, res) {
+    SecondHalfReviewForm.update({
+      accepted: req.body.accepted
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function (reviewForms) {
+      res.json(reviewForms);
+    });;
+  });
+
   secondHalf.get("/client/second-half/review-forms", function (req, res) {
-    var attributes = [ "mainPhotoUrl", "firstName", "gender", "birthday", "looking", "intention", "height", "weight", "eye", "work", "smoke", "drink", "about" ];
+    var attributes = [ "id", "createdAt", "mainPhotoUrl", "firstName", "gender", "birthday", "looking", "intention", "height", "weight", "eye", "work", "smoke", "drink", "about" ];
     SecondHalfReviewForm.findAll({
       attributes: attributes,
       where: req.query.where
@@ -94,18 +106,6 @@ module.exports = function (options) {
     }).then(function (reviewForms) {
       res.json(reviewForms);
     });
-  });
-
-  secondHalf.put("/client/second-half/review-forms/:id", function (req, res) {
-    SecondHalfReviewForm.update({
-      accepted: req.body.accepted
-    }, {
-      where: {
-        id: req.body.id
-      }
-    }).then(function (reviewForms) {
-      res.json(reviewForms);
-    });;
   });
 
   return secondHalf;

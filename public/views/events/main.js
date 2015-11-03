@@ -38,25 +38,60 @@ define([
 
     });
 
-    return new (Backbone.View.extend({
+    return Backbone.View.extend({
       tagName: "article",
       id: "main-article-wrap",
-      initialize: function() {
-        this.$el.append(template);
-        var eventsCollection = new EventsCollection();
-        var eventsView = new EventsView({ el: this.$el.find("#future-events-list") });
-        eventsCollection.fetch({
+      eventsCollection: new EventsCollection(),
+      load: function () {
+        var $eventsView = this.eventsView.$el;
+        var $loaderScreen = this.$loaderScreen;
+        TweenMax.to($eventsView, 0.6, {
+          opacity: 0
+        });
+        TweenMax.fromTo($loaderScreen, 0.6, {
+          opacity: 0
+        }, {
+          opacity: 1,
+          onStart: function () { $loaderScreen.css("display", "block"); }
+        });
+      },
+      loaded: function () {
+        var $eventsView = this.eventsView.$el;
+        var $loaderScreen = this.$loaderScreen;
+        TweenMax.to($eventsView, 0.6, {
+          opacity: 1
+        });
+        TweenMax.fromTo($loaderScreen, 0.6, {
+          opacity: 1
+        }, {
+          opacity: 0,
+          onComplete: function () { $loaderScreen.css("display", "none"); }
+        });
+      },
+      render: function () {
+        var view = this;
+        var $eventsView = this.eventsView.$el;
+        this.load();
+        this.eventsCollection.fetch({
           success: function (collection) {
             collection.each(function (model) {
               var eventView = new EventView({ model: model });
               eventView.render();
-              eventsView.$el.append(eventView.$el);
+              $eventsView.append(eventView.$el);
+              view.loaded();
             });
           }
         });
-        $("#main-section").append(this.$el);
+      },
+      initialize: function() {
+        this.$el.html(template);
+        this.eventsView = new EventsView({ el: this.$el.find("#future-events-list") });
+        this.$loaderScreen = this.$el.find("#load-form-screen");
+        this.$loader = this.$el.find("#loader-container");
+        $("#main-section").html(this.$el);
+        this.render();
       }
-    }));
+    });
 
   };
 

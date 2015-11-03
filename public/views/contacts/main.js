@@ -85,15 +85,15 @@ define([
       }
     });
 
-    return new (Backbone.View.extend({
+    return Backbone.View.extend({
       tagName: "article",
       id: "main-article-wrap",
       initialize: function() {
-        this.$el.append(template);
+        this.$el.html(template);
         new FeedbackView({ el: this.$el.find("form[name=\"sendContacts\"]") });
-        $("#main-section").append(this.$el);
+        $("#main-section").html(this.$el);
       }
-    }));
+    });
 
   };
 

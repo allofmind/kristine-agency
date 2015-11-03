@@ -82,6 +82,10 @@ br {
   clear: both;
 }
 
+br.small {
+  height: 10px;
+}
+
 br.lite {
   height: 15px;
 }
@@ -157,6 +161,7 @@ button.simple-button[disabled] {
 a.simple-button[disabled].sended,
 button.simple-button[disabled].sended {
   animation-play-state: paused;
+  animation: none;
 }
 
 a.simple-button[disabled]:hover,
@@ -399,31 +404,11 @@ input.for-range {
   border: 0;
 }
 
-#send-form-screen {
-  display: none;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.form-container {
+.form-container,
+.form-content,
+.loaded-content-container {
   position: relative;
-}
-
-#send-form-screen .message-popup {
-  position: absolute;
-  bottom: 115px;
-  background-color: #fff;
-  width: 600px;
-  left: 50%;
-  margin-left: -300px;
-  border-radius: 2px;
-  border: 1px solid #ccc;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  min-height: 350px;
 }
 
 

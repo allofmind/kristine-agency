@@ -1,27 +1,5 @@
-.search-button {
-  cursor: pointer;
-  user-select: none;  
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-.search-filter {
-  display: none;
-}
-
-.search-filter.active {
-  display: block;
-}
-
-
-.filter-form {
-  overflow: hidden;
-}
-
 .forms-profile-container {
-  position: relative;
-  min-height: 350px;
+
 }
 
 .forms-profile-container .form-profile {
@@ -71,26 +49,4 @@
 
 .forms-profile-container .form-profile .form-profile-info h1 {
   font-size: 20px;
-}
-
-.slider-option {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.not-found {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.not-found .centered-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  text-align: center;
-  transform: translateX(-50%) translateY(-50%);
 }

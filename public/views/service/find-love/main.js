@@ -108,30 +108,13 @@ define([
       },
       "submit form[name=\"second-half-form\"]": function () {
         var formView = this;
+        formView.load();
         this.model.save(null, {
           success: function () {
-            var messagePopupLoading = formView.$loadScreen.find("#message-popup-loading")
-            var messagePopupComplete = formView.$loadScreen.find("#message-popup-complete")
-            TweenMax.fromTo(messagePopupLoading, 0.6, {
-              opacity: 1
-            }, {
-              opacity: 0,
-              onComplete: function () {
-                messagePopupLoading.css("display", "none");
-              }
-            });
-            TweenMax.fromTo(messagePopupComplete, 0.6, {
-              opacity: 0
-            }, {
-              opacity: 1,
-              onStart: function () {
-                messagePopupComplete.css("display", "block");
-              },
-              onComplete: function () {
-                setTimeout(function () {
-                  Backbone.history.navigate("#/service");
-                }, 1500);
-              }
+            formView.loaded(function () {
+              setTimeout(function () {
+                Backbone.history.navigate("#/service");
+              }, 900);
             });
           },
           error: function () {
@@ -139,6 +122,33 @@ define([
           }
         });
       }
+    },
+    load: function () {
+      var $loadFormScreen = this.$loadFormScreen;
+      var $sendButton = this.$sendButton;
+      TweenMax.fromTo($loadFormScreen, 0.6, {
+        opacity: 0
+      }, {
+        opacity: 1,
+        onStart: function () {
+          $loadFormScreen.css("display", "block");
+        }
+      });
+      $sendButton.attr("disabled", true);
+      $sendButton.text("Обработка данных");
+    },
+    loaded: function (callback) {
+      var $loaderContainer = this.$loaderContainer;
+      var $sendButton = this.$sendButton;
+      TweenMax.to($loaderContainer, 0.6, {
+        opacity: 0,
+        onComplete: function () {
+          $loaderContainer.css("display", "none");
+          if (callback) callback();
+        }
+      });
+      $sendButton.addClass("sended");
+      $sendButton.text("Данные приняты");
     },
     close: function () {
       var findLove = this;
@@ -159,8 +169,11 @@ define([
     },
     initialize: function() {
       $("body").addClass("poppup-active");
-      this.$el.append(template);
+      this.$el.html(template);
       this.$formBox = this.$el.find("#form-box");
+      this.$loadFormScreen = this.$el.find("#load-form-screen");
+      this.$loaderContainer = this.$loadFormScreen.find("#loader-container");
+      this.$sendButton = this.$el.find("#send-button");
       TweenMax.fromTo(this.$el, 0.6, {
         opacity: 0
       }, {
@@ -173,7 +186,6 @@ define([
         scaleX: 1,
         scaleY: 1
       });
-      this.$loadScreen = this.$el.find("#send-form-screen");
     }
   });
 

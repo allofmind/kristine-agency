@@ -1,7 +1,164 @@
 <div id="main-article">
-  <div class="centered-content">
-    <h1>Парни</h1>
+  <header>
+    <h1 class="centered-content">
+      Наши парни
+    </h1>
+  </header>
+  <br class="normal">
+  <aside>
+    <form name="search-form" action="javascript:void(0);">
+      <fieldset class="multi">
+        <legend>Поиск по Id:</legend>
+        <label class="tab-15">
+          <input name="user-id" type="text">
+        </label>
+        <label>
+          <button id="find-by-id" class="simple-button">Быстрый поиск</button>
+        </label>
+        <label style="float: right;">
+          <button id="find-by-params" class="simple-button">Поиск по параметрам</button>
+        </label>
+      </fieldset>
+    </form>
+    <br class="normal">
+    <form name="filter-form" class="filter-form" action="javascript:void(0);">
+      <fieldset class="multi">
+        <legend>Основные параметры:</legend>
+        <label class="tab-50">
+          <select name="looking">
+            <option value=""></option>
+            <option value="0">Парня</option>
+            <option value="1">Девушку</option>
+            <option value="2">Другое</option>
+          </select>
+          <br>
+          <span id="title">Кого ищу</span>
+        </label>
+        <label class="tab-50">
+          <select name="intention">
+            <option value=""></option>
+            <option value="0">Дружба</option>
+            <option value="1">Близкие отношения</option>
+            <option value="2">Другое</option>
+          </select>
+          <br>
+          <span id="title">Цель знакомства</span>
+        </label>
+      </fieldset>
+      <br class="lite">
+      <fieldset class="double">
+        <legend>
+          Возраст:
+          <span id="age-from"></span>
+          -
+          <span id="age-to"></span>
+          лет
+        </legend>
+        <br class="lite">
+        <div id="slider-age" class="slider-option"></div>
+        </label>
+      </fieldset>
+      <br class="lite">
+      <fieldset class="double">
+        <legend>
+          Рост:
+          <span id="height-from"></span>
+          -
+          <span id="height-to"></span>
+          см
+        </legend>
+        <br class="lite">
+        <div id="slider-height" class="slider-option"></div>
+        </label>
+      </fieldset>
+      <br class="lite">
+      <fieldset class="double">
+        <legend>
+          Вес:
+          <span id="weight-from"></span>
+          -
+          <span id="weight-to"></span>
+          кг
+        </legend>
+        <br class="lite">
+        <div id="slider-weight" class="slider-option"></div>
+        </label>
+      </fieldset>
+      <br class="normal">
+      <fieldset class="multi">
+        <legend>Цвет глаз:</legend>
+        <label class="tab-30">
+          <select name="eye">
+            <option value=""></option>
+            <option value="0">Карие</option>
+            <option value="1">Зеленые</option>
+            <option value="2">Серые</option>
+            <option value="3">Синие</option>
+            <option value="4">Другой</option>
+          </select>
+          <br>
+          <span id="title"></span>
+        </label>
+      </fieldset>
+      <br class="lite">
+      <fieldset class="multi">
+        <legend>Занятие:</legend>
+        <label class="tab-30">
+          <select name="work">
+            <option value=""></option>
+            <option value="0">Учусь</option>
+            <option value="1">Работаю</option>
+            <option value="2">Фриланс</option>
+            <option value="3">Другое</option>
+          </select>
+          <br>
+          <span id="title"></span>
+        </label>
+      </fieldset>
+      <br class="lite">
+      <fieldset class="multi">
+        <legend>Вредные привычки:</legend>
+        <label class="tab-25">  
+          <select name="smoke">
+            <option value=""></option>
+            <option value="0">Да</option>
+            <option value="1">Нет</option>
+            <option value="2">Иногда</option>
+          </select>
+          <br>
+          <span id="title">Курение</span>
+        </label>
+        <label class="tab-25">
+          <select name="alcohol">
+            <option value=""></option>
+            <option value="0">Да</option>
+            <option value="1">Нет</option>
+            <option value="2">Иногда</option>
+          </select>
+          <br>
+          <span id="title">Спиртные напитки</span>
+        </label>
+      </fieldset>
+      <br class="normal">
+      <div class="centered-content">
+        <button id="find-by-params-submit" class="simple-button">Искать</button>
+      </div>
+    </form>
+  </aside>
+  <br class="normal">
+  <div id="search-filter-container" class="search-filter-container"></div>
+  <div id="forms-profile-container" class="forms-profile-container">
+    <br class="hard">
+    <div id="forms-profile" class="forms-profile"></div>
+    <div id="load-form-screen" class="load-form-screen">
+      <div class="loader-container">
+        <div class="loader"></div>
+      </div>
+    </div>
+    <div id="not-found" class="not-found">
+      <p class="centered-text">
+        По данному запросу не найдено ни одного результата. Измените критерии поиска или попробуйте позже.
+      </p>
+    </div>
   </div>
-  <br class="hard">
-  <div id="forms-profile-container" class="forms-profile-container"></div>
 </div>

@@ -91,7 +91,7 @@
     <p>О себе: <%= about %></p>
   <% } %>
   <br class="lite"/>
-  <% if (id) { %>
+  <% if (typeof id === "number") { %>
     <p>Номер анкеты: <%= id %></p>
   <% } %>
 </div>

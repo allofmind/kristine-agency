@@ -162,6 +162,8 @@ require([ "libraries/backbone-min" ], function () {
         this.mainLoader({
           viewName: "about",
           viewPath: "views/about/main"
+        }, function (AboutView) {
+          return new AboutView();
         });
       },
       "service": function () {
@@ -260,22 +262,89 @@ require([ "libraries/backbone-min" ], function () {
           });
         });
       },
-      "man": function (params) {
+      "man": function () {
         this.mainLoader({
           viewName: "man",
           viewPath: "views/man/main"
+        }, function (ManView) {
+          var manView = new ManView();
+          manView.render({
+            where: {
+              accepted: 2,
+              gender: 0
+            }
+          });
+          manView.searchFormView.closed();
+          return manView;
+        }, function (manView) {
+          manView.searchFormView.close();
+          manView.render({
+            where: {
+              accepted: 2,
+              gender: 0
+            }
+          });
+        });
+      },
+      "man/find-id/:id": function (id) {
+        this.mainLoader({
+          viewName: "man",
+          viewPath: "views/man/main"
+        }, function (ManView) {
+          var manView = new ManView();
+          manView.render({
+            where: {
+              accepted: 2,
+              gender: 0,
+              id: id
+            }
+          });
+          manView.searchFormView.closed();
+          return manView;
+        }, function (manView) {
+          manView.searchFormView.close();
+          manView.render({
+            where: {
+              accepted: 2,
+              gender: 0,
+              id: id
+            }
+          });
+        });
+      },
+      "man/find-params": function (queryString) {
+        var query = $.query(queryString);
+        query.accepted = 2;
+        query.gender = 0;
+        this.mainLoader({
+          viewName: "man",
+          viewPath: "views/man/main"
+        }, function (ManView) {
+          var manView = new manView();
+          manView.searchFormView.opened();
+          manView.render({ where: query });
+          return manView;
+        }, function (manView) {
+          manView.searchFormView.open();
+          manView.render({
+            where: query
+          });
         });
       },
       "events": function (params) {
         this.mainLoader({
           viewName: "events",
           viewPath: "views/events/main"
+        }, function (EventsView) {
+          return new EventsView();
         });
       },
       "contacts": function (params) {
         this.mainLoader({
           viewName: "contacts",
           viewPath: "views/contacts/main"
+        }, function (ContactsView) {
+          return new ContactsView();
         });
       }
     },
